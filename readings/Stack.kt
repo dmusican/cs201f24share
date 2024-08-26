@@ -21,7 +21,6 @@ class Stack<T> {
         return list.removeLast()
     }
 
-
     fun peek(): T {
         if (list.size == 0) {
             throw Exception("Stack is empty.")
