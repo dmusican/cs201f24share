@@ -1,11 +1,11 @@
 // Kotlin version of linked list code from
-// https://www.guru99.com/singly-linked-list.html
+// https://www.geeksforgeeks.org/singly-linked-list-tutorial/
 // Ported by Dave Musicant
 
 class SinglyLinkedList<T> {
 
     private data class Node<T>(
-        var value: T,
+        var item: T,
         var next: Node<T>?)
 
     private var head: Node<T>? = null
@@ -13,7 +13,7 @@ class SinglyLinkedList<T> {
     fun traverse() {
         var current = head
         while (current != null) {
-            print("" + current.value + " ")
+            print("" + current.item + " ")
             current = current.next
         }
         println()
@@ -22,7 +22,7 @@ class SinglyLinkedList<T> {
     fun search(target: T): Boolean {
         var current = head
         while (current != null) {
-            if (current.value == target) {
+            if (current.item == target) {
                 return true
             }
             current = current.next
@@ -40,14 +40,14 @@ class SinglyLinkedList<T> {
         return length
     }
 
-    fun insertAtBeginning(value: T) {
-        val newNode = Node(value, null)
+    fun insertAtBeginning(item: T) {
+        val newNode = Node(item, null)
         newNode.next = head
         head = newNode
     }
 
-    fun insertAtEnd(value: T) {
-        val newNode = Node(value, null)
+    fun insertAtEnd(item: T) {
+        val newNode = Node(item, null)
 
         // If the list is empty, make the new node the head
         if (head == null) {
@@ -63,13 +63,13 @@ class SinglyLinkedList<T> {
         current.next = newNode
     }
 
-    fun insertAtPosition(position: Int, value: T) {
+    fun insertAtPosition(position: Int, item: T) {
         if (position < 0) {
             throw Exception("Invalid position!")
         }
 
         else if (position == 0) {
-            insertAtBeginning(value)
+            insertAtBeginning(item)
         }
 
         else {
@@ -84,35 +84,32 @@ class SinglyLinkedList<T> {
                 }
             }
             // current cannot be null because just checked
-            val temp = Node(value, current!!.next)
+            val temp = Node(item, current!!.next)
             current.next = temp
         }
     }
 
-    fun removeFirstNode(): T {
-        val tempHead = head
-        if (tempHead == null) {
+    fun removeFirstNode() {
+        val headVal = head
+        if (headVal == null) {
             throw Exception("List is empty!")
         } else {
-            val firstValue = tempHead.value
-            head = tempHead.next
-            return firstValue
+            head = headVal.next
         }
     }
 
-    fun removeLastNode(): T? {
+    fun removeLastNode() {
         val headVal = head
 
-        // If the list is empty, return null
+        // If the list is empty, do nothing
         if (headVal == null) {
-            return null;
+            return
         }
 
-        // If the list has only one node, delete it and return the value
+        // If the list has only one node, delete it
         if (headVal.next == null) {
-            val removedValue = headVal.value
             head = null
-            return removedValue
+            return
         }
 
         // Find the second last node
@@ -123,12 +120,41 @@ class SinglyLinkedList<T> {
         }
 
         // Remove the last node
-        val removedValue = secondLast.value
         secondLast.next = null
-        return removedValue
     }
 
 
+    fun deleteAtPosition(position: Int) {
+        val headCopy = head
+
+        // If the list is empty or the position is invalid
+        if (headCopy == null || position < 0) {
+            throw Exception("Invalid position!")
+        }
+
+        // If the head needs to be deleted
+        if (position == 0) {
+            head = headCopy.next
+        }
+
+        // Traverse to the node before the position to be deleted
+        var current = headCopy
+        for (skips in 0..<position-1) {
+            // current cannot be null because just checked head
+            // first time, and then checked immediately afterwards
+            current = current!!.next
+            if (current == null) {
+                throw Exception("List not long enough!")
+            }
+        }
+
+        // Verify position was not too large
+        if (current!!.next == null) {
+            throw Exception("List not long enough!")
+        }
+
+        current.next = current.next!!.next
+    }
 }
 
 
@@ -154,5 +180,11 @@ fun main() {
     list.removeFirstNode()
     list.traverse()
     list.removeLastNode()
+    list.traverse()
+    list.deleteAtPosition(0)
+    list.traverse()
+    list.deleteAtPosition(4)
+    list.traverse()
+    list.deleteAtPosition(4)
     list.traverse()
 }
