@@ -2,7 +2,7 @@ import kotlin.test.*
 
 class StackTest {
     @Test
-    fun test1() {
+    fun testStackOperations() {
         val s = Stack<Int>()
         s.push(10)
         s.push(20)

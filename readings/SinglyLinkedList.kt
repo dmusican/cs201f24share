@@ -10,13 +10,14 @@ class SinglyLinkedList<T> {
 
     private var head: Node<T>? = null
 
-    fun traverse() {
+    override fun toString(): String {
+        var result = ""
         var current = head
         while (current != null) {
-            print("" + current.item + " ")
+            result = result + current.item + " "
             current = current.next
         }
-        println()
+        return result.trim()
     }
 
     fun search(target: T): Boolean {
@@ -77,7 +78,6 @@ class SinglyLinkedList<T> {
             for (skips in 0..<position-1) {
                 // current cannot be null because just checked head
                 // first time, and then checked immediately afterwards
-                println("skipping")
                 current = current!!.next
                 if (current == null) {
                     throw Exception("List not long enough!")
@@ -167,24 +167,24 @@ fun main() {
     println(list.search(2))
     println(list.search(3))
     println(list.search(4))
-    list.traverse()
+    println(list)
     println(list.length())
     list.insertAtEnd(8)
-    list.traverse()
+    println(list)
     list.insertAtPosition(0, 10)
     list.insertAtPosition(1, 11)
     list.insertAtPosition(2, 12)
     list.insertAtPosition(4, 13)
     list.insertAtPosition(8, 14)
-    list.traverse()
+    println(list)
     list.removeFirstNode()
-    list.traverse()
+    println(list)
     list.removeLastNode()
-    list.traverse()
+    println(list)
     list.deleteAtPosition(0)
-    list.traverse()
+    println(list)
     list.deleteAtPosition(4)
-    list.traverse()
+    println(list)
     list.deleteAtPosition(4)
-    list.traverse()
+    println(list)
 }
