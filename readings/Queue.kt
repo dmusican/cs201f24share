@@ -45,6 +45,10 @@ class Queue<T> {
         return item
     }
 
+    override fun toString(): String {
+        return items.subList(front, rear+1).toString()
+    }
+
     fun display() {
         println()
         if (isEmpty()) {

@@ -29,8 +29,8 @@ class Stack<T> {
         return list[list.size-1]
     }
 
-    fun print() {
-        println(list)
+    override fun toString(): String {
+        return list.toString()
     }
 }
 
@@ -43,5 +43,5 @@ fun main() {
     println("" + s.pop() + " Popped from stack")
     println("Top element is :" + s.peek())
     println("Elements present in stack :")
-    s.print()
+    println(s)
 }
