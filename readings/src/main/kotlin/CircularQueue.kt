@@ -42,10 +42,11 @@ class CircularQueue<T> {
                 newItems.addAll(items.subList(front, items.size))
                 newItems.addAll(items.subList(0, rear+1))
                 items = newItems
+                front = 0
             }
 
             items.add(item)
-            rear++
+            rear = items.size-1
         }
 
         // Final case, which means queue has room: can just add to rear and
@@ -74,18 +75,30 @@ class CircularQueue<T> {
         return item
     }
 
+    override fun toString(): String {
+        var result = ""
+        var i = front
+        while (i != rear) {
+            result = result + items[i].toString() + " "
+            i = (i + 1) % items.size
+        }
+        result = result + items[i].toString()
+        return result
+    }
+
     fun display() {
         println()
         if (isEmpty()) {
             println("Empty queue")
         } else {
-            println("Front index-> " + front)
+            println("Fronsssst index-> " + front)
             println("Items -> ")
             var i = front
             while (i != rear) {
                 println(items[i].toString() + " ")
                 i = (i + 1) % items.size
             }
+            println(items[i].toString())
             println("Rear index-> " + rear)
         }
     }
@@ -96,6 +109,7 @@ fun main() {
     val q = CircularQueue<Int>()
     q.enqueue(1)
     q.enqueue(2)
+    q.dequeue()
     q.enqueue(3)
     q.enqueue(4)
     q.enqueue(5)
