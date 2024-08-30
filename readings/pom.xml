@@ -28,7 +28,7 @@
 
     <build>
         <sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
-        <testSourceDirectory>${project.basedir}/test</testSourceDirectory>
+        <testSourceDirectory>${project.basedir}/test/main/kotlin</testSourceDirectory>
         <plugins>
 
             <plugin>
