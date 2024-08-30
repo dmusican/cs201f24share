@@ -26,6 +26,16 @@ class DoublyLinkedList<T> {
         return result.trim()
     }
 
+    fun toStringBackwards(): String {
+        var result = ""
+        var current = tail
+        while (current != null) {
+            result = result + current.item + " "
+            current = current.prev
+        }
+        return result.trim()
+    }
+
     fun search(target: T): Boolean {
         var current = head
         while (current != null) {
@@ -49,9 +59,12 @@ class DoublyLinkedList<T> {
 
     fun insertAtBeginning(item: T) {
         val newNode = Node(item, head, null)
-        if (head != null) {
-            head!!.prev = newNode
+
+        val headLocal = head
+        if (headLocal != null) {
+            headLocal.prev = newNode
         }
+
         if (tail == null) {
             tail = newNode
         }
@@ -61,8 +74,9 @@ class DoublyLinkedList<T> {
     fun insertAtEnd(item: T) {
         val newNode = Node(item, null, tail)
 
-        if (tail != null) {
-            tail!!.next = newNode
+        val tailLocal = tail
+        if (tailLocal != null) {
+            tailLocal.next = newNode
         }
 
         if (head == null) {
@@ -158,8 +172,8 @@ class DoublyLinkedList<T> {
             tail = current
             current.next = null
         } else {
-            current.next = current.next!!.next
             current.next!!.next!!.prev = current
+            current.next = current.next!!.next
         }
     }
 }
