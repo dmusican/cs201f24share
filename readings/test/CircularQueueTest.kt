@@ -26,9 +26,9 @@ class CircularQueueTest {
         for (i in 0..1000) {
             q.enqueue(2*i)
             q.enqueue(2*i+1)
-            println("---" + q + "---")
+            // println("---" + q + "---")
             assertEquals(i,q.dequeue())
-            println("!--" + q + "---")
+            // println("!--" + q + "---")
         }
     }
 }

@@ -91,7 +91,7 @@ class CircularQueue<T> {
         if (isEmpty()) {
             println("Empty queue")
         } else {
-            println("Fronsssst index-> " + front)
+            println("Front index-> " + front)
             println("Items -> ")
             var i = front
             while (i != rear) {
