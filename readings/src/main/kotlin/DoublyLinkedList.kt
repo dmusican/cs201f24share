@@ -60,9 +60,9 @@ class DoublyLinkedList<T> {
     fun insertAtBeginning(item: T) {
         val newNode = Node(item, head, null)
 
-        val headLocal = head
-        if (headLocal != null) {
-            headLocal.prev = newNode
+        val first = head
+        if (first != null) {
+            first.prev = newNode
         }
 
         if (tail == null) {
@@ -74,9 +74,9 @@ class DoublyLinkedList<T> {
     fun insertAtEnd(item: T) {
         val newNode = Node(item, null, tail)
 
-        val tailLocal = tail
-        if (tailLocal != null) {
-            tailLocal.next = newNode
+        val last = tail
+        if (last != null) {
+            last.next = newNode
         }
 
         if (head == null) {
@@ -140,40 +140,48 @@ class DoublyLinkedList<T> {
     }
 
     fun deleteAtPosition(position: Int) {
-        val headCopy = head
+        var current = head
 
         // If the list is empty or the position is invalid
-        if (headCopy == null || position < 0) {
+        if (current == null || position < 0) {
             throw Exception("Invalid position!")
         }
 
-        // If the head needs to be deleted
+        // If the first node needs to be deleted, special case
+        // because head needs to be moved
         if (position == 0) {
-            head = headCopy.next
+            val nextNode = current.next
+            head = nextNode
+            if (nextNode != null) {
+                nextNode.prev = null
+            } else {
+                tail = null
+            }
+            return
         }
 
-        // Traverse to the node before the position to be deleted
-        var current = headCopy
-        for (skips in 0..<position-1) {
-            // current cannot be null because just checked head
-            // first time, and then checked immediately afterwards
-            current = current!!.next
+        // Traverse to the node to be deleted
+        for (skips in 0..<position) {
             if (current == null) {
                 throw Exception("List not long enough!")
             }
+            current = current.next
         }
 
         // Verify position was not too large
-        if (current!!.next == null) {
+        if (current == null) {
             throw Exception("List not long enough!")
         }
 
-        if (current.next == tail) {
-            tail = current
-            current.next = null
+        // Last node to be deleted is a special case, since
+        // tail needs to be moved. We know there are at least two
+        // nodes, because if only one node, would have been handled above
+        if (current.next == null) {
+            tail = current.prev
+            tail!!.next = null
         } else {
-            current.next!!.next!!.prev = current
-            current.next = current.next!!.next
+            current.next!!.prev = current.prev
+            current.prev!!.next = current.next
         }
     }
 }

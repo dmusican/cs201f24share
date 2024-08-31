@@ -38,4 +38,13 @@ class DoublyLinkedListTest {
         assertEquals("12 3 13 2", list.toString())
         assertEquals("2 13 3 12", list.toStringBackwards())
     }
+
+    @Test
+    fun testEmpty() {
+        val list = DoublyLinkedList<Int>()
+        list.insertAtBeginning(1)
+        list.deleteAtPosition(0)
+        assertEquals("", list.toString())
+        assertEquals("", list.toStringBackwards())
+    }
 }
