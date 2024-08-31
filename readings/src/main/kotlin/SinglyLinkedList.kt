@@ -90,55 +90,52 @@ class SinglyLinkedList<T> {
     }
 
     fun removeFirstNode() {
-        val headVal = head
-        if (headVal == null) {
+        val current = head
+        if (current == null) {
             throw Exception("List is empty!")
         } else {
-            head = headVal.next
+            head = current.next
         }
     }
 
     fun removeLastNode() {
-        val headVal = head
+        var current = head
 
         // If the list is empty, do nothing
-        if (headVal == null) {
+        if (current == null) {
             return
         }
 
         // If the list has only one node, delete it
-        if (headVal.next == null) {
+        if (current.next == null) {
             head = null
             return
         }
 
-        // Find the second last node
-        var secondLast = headVal
         // Have already verified there are at least two nodes
-        while (secondLast!!.next!!.next != null) {
-            secondLast = secondLast.next
+        while (current!!.next!!.next != null) {
+            current = current.next
         }
 
         // Remove the last node
-        secondLast.next = null
+        current.next = null
     }
 
 
     fun deleteAtPosition(position: Int) {
-        val headCopy = head
+        var current = head
 
         // If the list is empty or the position is invalid
-        if (headCopy == null || position < 0) {
+        if (current == null || position < 0) {
             throw Exception("Invalid position!")
         }
 
         // If the head needs to be deleted
         if (position == 0) {
-            head = headCopy.next
+            head = current.next
         }
 
         // Traverse to the node before the position to be deleted
-        var current = headCopy
         for (skips in 0..<position-1) {
             // current cannot be null because just checked head
             // first time, and then checked immediately afterwards

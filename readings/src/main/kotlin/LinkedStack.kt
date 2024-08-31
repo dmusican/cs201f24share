@@ -19,22 +19,22 @@ class LinkedStack<T> {
     }
 
     fun pop(): T {
-        val headVal = head
-        if (headVal == null) {
+        val current = head
+        if (current == null) {
             throw Exception("List is empty!")
         } else {
-            val poppedValue = headVal.item
-            head = headVal.next
+            val poppedValue = current.item
+            head = current.next
             return poppedValue
         }
     }
 
     fun peek(): T {
-        val headVal = head
-        if (headVal == null) {
+        val current = head
+        if (current == null) {
             throw Exception("Stack is empty.")
         } else {
-            return headVal.item
+            return current.item
         }
     }
 
