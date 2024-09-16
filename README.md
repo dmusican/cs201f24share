@@ -1,2 +1,2 @@
 # cs201f24share
-Shared code for cs201. Added something.
+Shared code for cs201.
