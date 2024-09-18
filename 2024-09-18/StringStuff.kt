@@ -7,7 +7,7 @@ fun main()
     // }
 
     // Print every other letter
-    for (index in 0..name.count())
+    for (index in 0..<name.count())
     {
         println(name[index])
     }
