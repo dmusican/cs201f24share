@@ -5,5 +5,6 @@ fun main()
 
     print("What is your guess? ")
     guess = readln().toInt()
+    println("Thank you")
 }
 
