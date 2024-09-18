@@ -8,7 +8,7 @@ fun main()
 
     val morethings = mutableListOf(19, 62, 128, 34)
     morethings[0] = 17
-    println(morething)
+    println(morethings)
 }
 
  
