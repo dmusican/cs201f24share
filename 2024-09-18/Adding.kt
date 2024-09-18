@@ -1,10 +1,12 @@
-fun addItUp(listToAdd: List<Int>): Int
+fun addItUp(listToAdd: List<Int>,
+            finalNumber: Int): Int
 {
     var total = 0
     for (number in listToAdd)
     {
         total = number + total
     }
+    total = total + finalNumber
     return total
 }
 
