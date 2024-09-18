@@ -4,6 +4,6 @@ fun main()
     var guess = -1
 
     print("What is your guess? ")
-    guess = readln()
+    guess = readln().toInt()
 }
 
