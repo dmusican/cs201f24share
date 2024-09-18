@@ -5,6 +5,17 @@ fun main()
 
     print("What is your guess? ")
     guess = readln().toInt()
-    println("Thank you")
+    if (guess > secret)
+    {
+        println("Too big")
+    }
+    else if (guess < secret)
+    {
+        println("Too small")
+    }
+    else
+    {
+        println("You got it")
+    }
 }
 
