@@ -5,8 +5,5 @@ fun main()
 
     print("What is your guess? ")
     guess = readln()
-    
-
-    println("hello")
 }
 
