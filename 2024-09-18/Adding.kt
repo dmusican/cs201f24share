@@ -1,4 +1,4 @@
-fun addItUp(listToAdd)
+fun addItUp(listToAdd): Int
 {
     var total = 0
     for (number in listToAdd)
