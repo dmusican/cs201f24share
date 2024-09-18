@@ -5,6 +5,7 @@ fun addItUp(listToAdd)
     {
         total = number + total
     }
+    return total
 }
 
 fun main()
