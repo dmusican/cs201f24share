@@ -15,4 +15,5 @@ fun main() {
     s1.doBirthday()
     println(s1.age)
     println(s1.gradStatus)
+    println(s2.gradStatus)
 }
