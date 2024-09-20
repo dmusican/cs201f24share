@@ -1,7 +1,7 @@
 class Student(var name: String,
               var age: Int) {
     
-    var gradStatus: String = null
+    var gradStatus: String? = null
  
     fun doBirthday() {
         age = age + 1
