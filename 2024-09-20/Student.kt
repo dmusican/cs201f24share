@@ -25,4 +25,5 @@ fun main() {
     println(s1.age)
     println(s1.gradStatus)
     println(s2.gradStatus)
+    println(s1.getClassYear())
 }
