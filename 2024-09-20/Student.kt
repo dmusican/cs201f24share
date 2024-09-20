@@ -4,11 +4,12 @@ class Student(var name: String,
     var gradStatus: String? = null
 
     fun getClassYear(): String {
-        if (gradStatus == null) {
+        val gradStatusCopy
+        if (gradStatusCopy == null) {
             return "undefined"
         }
-        
-        return gradStatus.substring(0,2)
+
+        return gradStatusCopy.substring(0,2)
     }
  
     fun doBirthday() {
