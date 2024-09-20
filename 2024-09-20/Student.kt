@@ -2,6 +2,14 @@ class Student(var name: String,
               var age: Int) {
     
     var gradStatus: String? = null
+
+    fun getClassYear(): String {
+        if (gradStatus == null) {
+            return "undefined"
+        }
+        
+        return gradStatus.substring(0,2)
+    }
  
     fun doBirthday() {
         age = age + 1
