@@ -4,7 +4,7 @@ class Student(var name: String,
     var gradStatus: String? = null
 
     fun getClassYear(): String {
-        val gradStatusCopy
+        val gradStatusCopy = gradStatus
         if (gradStatusCopy == null) {
             return "undefined"
         }
