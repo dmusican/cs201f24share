@@ -1,4 +1,4 @@
-fun main()p`
+fun main()
 {
     var secret = 47
     var guess = -1
