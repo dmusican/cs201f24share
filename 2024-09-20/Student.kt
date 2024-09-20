@@ -1,8 +1,6 @@
-class Student {
-    // Instance variables
-    var name
-    var age
-
+class Student(var name: String,
+              var age: Int) {
+ 
     fun doBirthday() {
         age = age + 1
     }
