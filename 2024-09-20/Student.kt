@@ -14,4 +14,5 @@ fun main() {
     s1.gradStatus = "SO05" // soph 5th term
     s1.doBirthday()
     println(s1.age)
+    println(s1.gradStatus)
 }
