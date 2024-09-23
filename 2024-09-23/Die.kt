@@ -1,3 +1,11 @@
+class Die(val numSides: Int) {
+    var showing = 1
+
+    fun roll() {
+        showing = (1..numSides).random()
+    }
+}
+
 fun main() {
     val die1 = Die(6)
     die1.roll()
