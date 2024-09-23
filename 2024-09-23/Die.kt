@@ -10,6 +10,12 @@ class Die(val numSides: Int) {
         }
     }
 
+    // Run this when making an object with
+    // parameters as specified
+    constructor() {
+        println("Running with new constructor")
+    }
+    
     fun roll() {
         showing = (1..numSides).random()
     }
