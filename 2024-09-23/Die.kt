@@ -4,6 +4,7 @@ class Die(val numSides: Int) {
     // Function that is run right away
     // when object is getting made
     init {
+        println("I am initting.")
         if (numSides < 0) {
             throw RuntimeException(
                 "negative sides is bad, don't do that Dave")
@@ -12,10 +13,10 @@ class Die(val numSides: Int) {
 
     // Run this when making an object with
     // parameters as specified
-    constructor() {
+    constructor(): this(6) {
         println("Running with new constructor")
     }
-    
+
     fun roll() {
         showing = (1..numSides).random()
     }
