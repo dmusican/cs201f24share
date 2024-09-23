@@ -5,6 +5,7 @@ class Die(val numSides: Int) {
     // when object is getting made
     init {
         println("I am initting.")
+        println("numSides is $numSides")
         if (numSides < 0) {
             throw RuntimeException(
                 "negative sides is bad, don't do that Dave")
