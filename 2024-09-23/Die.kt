@@ -1,6 +1,10 @@
 class Die(val numSides: Int) {
     var showing = 1
 
+    ourspecialobject {
+        var numDice = 0
+    }
+
     // Function that is run right away
     // when object is getting made
     init {
@@ -10,6 +14,7 @@ class Die(val numSides: Int) {
             throw RuntimeException(
                 "negative sides is bad, don't do that Dave")
         }
+        numDice = numDice + 1
     }
 
     // Run this when making an object with
