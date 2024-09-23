@@ -1,7 +1,7 @@
 class Die(val numSides: Int) {
     var showing = 1
 
-    ourspecialobject {
+    companion object {
         var numDice = 0
     }
 
