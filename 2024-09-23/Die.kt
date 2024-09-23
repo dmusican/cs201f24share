@@ -1,4 +1,4 @@
-class Die(val numSides: Int = 6) {
+class Die(val numSides: Int) {
     var showing = 1
 
     // Function that is run right away
@@ -26,3 +26,7 @@ fun main() {
     die2.roll()
     println(die2.showing)
 }
+
+
+
+//class Die(val numSides: Int = 6) {
