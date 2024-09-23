@@ -34,10 +34,12 @@ fun main() {
     println(die1.showing)
     die1.roll()
     println(die1.showing)
+    println("Num dice = ${Die.numDice}")
     
     val die2 = Die(20)
     die2.roll()
     println(die2.showing)
+    println("Num dice = ${Die.numDice}")
 }
 
 
