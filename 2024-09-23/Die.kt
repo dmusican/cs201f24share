@@ -1,6 +1,15 @@
 class Die(val numSides: Int = 6) {
     var showing = 1
 
+    // Function that is run right away
+    // when object is getting made
+    init {
+        if (numSides < 0) {
+            throw RuntimeException(
+                "negative sides is bad, don't do that Dave")
+        }
+    }
+
     fun roll() {
         showing = (1..numSides).random()
     }
