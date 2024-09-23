@@ -1,4 +1,4 @@
-class Die(val numSides: Int) {
+class Die(val numSides: Int = 6) {
     var showing = 1
 
     fun roll() {
@@ -7,7 +7,7 @@ class Die(val numSides: Int) {
 }
 
 fun main() {
-    val die1 = Die(6)
+    val die1 = Die()
     die1.roll()
     println(die1.showing)
     die1.roll()
