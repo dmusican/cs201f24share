@@ -17,7 +17,19 @@ class Circle(var radius: Double) {
     }
 }
 
-
+fun main() {
+    print("(r)ectangle or (c)ircle? ")
+    val choice = readln()
+    if (choice == "r") {
+        val r = Rectangle(3.2, 6.7)
+        println(r.area())
+        println(r.perimeter())
+    } else {
+        val c = Circle(6.1)
+        println(c.area())
+        println(c.perimeter())     
+    }
+}
 
 
 
