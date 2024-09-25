@@ -20,7 +20,7 @@ class Circle(var radius: Double) {
 fun main() {
     print("(r)ectangle or (c)ircle? ")
     val choice = readln()
-    var s:Any? = null
+    var s: Shape
     if (choice == "r") {
         s = Rectangle(3.2, 6.7)
     } else {
