@@ -13,11 +13,11 @@ class Rectangle(var length: Double,
     }
 }
 
-class Circle(var radius: Double) {
-    fun area(): Double {
+class Circle(var radius: Double) : Shape {
+    override fun area(): Double {
         return Math.PI * radius * radius
     }
-    fun perimeter(): Double {
+    override fun perimeter(): Double {
         return 2 * Math.PI * radius
     }
 }
