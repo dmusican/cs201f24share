@@ -1,3 +1,9 @@
+interface Shape {
+    fun area(): Double
+    fun perimeter(): Double
+}
+
+
 class Rectangle(var length: Double,
                 var width: Double) {
     fun area(): Double {
