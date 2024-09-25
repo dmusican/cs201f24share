@@ -3,13 +3,12 @@ interface Shape {
     fun perimeter(): Double
 }
 
-
 class Rectangle(var length: Double,
-                var width: Double) {
-    fun area(): Double {
+                var width: Double) : Shape {
+    override fun area(): Double {
         return length * width
     }
-    fun perimeter(): Double {
+    override fun perimeter(): Double {
         return 2*length + 2*width
     }
 }
