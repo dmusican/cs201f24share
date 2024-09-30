@@ -8,3 +8,5 @@ interface Stack {
 class ArrayStack : Stack {
     // Initial array of size 10
     var array = arrayOfNulls<Int>(10)
+    // Number of items in stack
+    var size = 0
