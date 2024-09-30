@@ -1,6 +1,6 @@
 interface Stack {
     fun push(item: Int)
-    fun pop(): Int
+    // fun pop(): Int
     fun peek(): Int
     fun isEmpty(): Boolean
 }
@@ -38,4 +38,12 @@ class ArrayStack : Stack {
         // code, and I want to see that error happen
         return array[stackSize-1]!!
     }
+}
+
+fun main() {
+    val myStack = ArrayStack()
+    myStack.push(3)
+    myStack.push(70)
+    myStack.push(18)
+    println(myStack.peek())
 }
