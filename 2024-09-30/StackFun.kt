@@ -29,6 +29,12 @@ class ArrayStack : Stack {
         stackSize++
     }
 
+    override fun pop(): Int {
+        val itemOnTop = peek()
+        stackSize--
+        return itemOnTop
+    }
+
     override fun peek(): Int {
         if (stackSize == 0) {
             throw RuntimeException("Stack is empty!")
