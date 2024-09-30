@@ -16,17 +16,14 @@ class ArrayStack : Stack {
     }
 
     override fun push(item: Int) {
-        if (stackSize < array.count()) {
-            array[stackSize] = item
-            stackSize++
-        } else {
+        if (stackSize >= array.count()) {
             val newArray = arrayOfNulls<Int>(array.count()*2)
             // Copy contents of old array
             for (i in array.indices) {
                 newArray[i] = array[i]
             }
             array = newArray
-            array[stackSize] = item
-            stackSize++
         }
+        array[stackSize] = item
+        stackSize++
     }
