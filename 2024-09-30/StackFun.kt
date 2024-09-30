@@ -33,5 +33,5 @@ class ArrayStack : Stack {
         if (stackSize == 0) {
             throw RuntimeException("Stack is empty!")
         }
-        return array[stackSize-1]
+        return array[stackSize-1]!!
     }
