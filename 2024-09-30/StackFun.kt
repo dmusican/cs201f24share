@@ -28,3 +28,7 @@ class ArrayStack : Stack {
         array[stackSize] = item
         stackSize++
     }
+
+    override fun peek(): Int {
+        return array[stackSize-1]
+    }
