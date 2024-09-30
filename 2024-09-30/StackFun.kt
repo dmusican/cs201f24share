@@ -35,3 +35,4 @@ class ArrayStack : Stack {
         }
         return array[stackSize-1]!!
     }
+}
