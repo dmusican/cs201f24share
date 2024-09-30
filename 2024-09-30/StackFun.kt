@@ -7,6 +7,10 @@ interface Stack {
 
 class ArrayStack : Stack {
     // Initial array of size 10
-    var array = arrayOfNulls<Int>(10)
+    private var array = arrayOfNulls<Int>(10)
     // Number of items in stack
-    var size = 0
+    private var size = 0
+
+    override fun isEmpty(): Boolean {
+        return size > 0
+    }
