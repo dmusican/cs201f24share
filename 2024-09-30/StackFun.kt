@@ -30,5 +30,8 @@ class ArrayStack : Stack {
     }
 
     override fun peek(): Int {
+        if (stackSize == 0) {
+            throw RuntimeException("Stack is empty!")
+        }
         return array[stackSize-1]
     }
