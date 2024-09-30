@@ -31,6 +31,7 @@ class ArrayStack : Stack {
 
     override fun pop(): Int {
         val itemOnTop = peek()
+        array[stackSize-1] = null
         stackSize--
         return itemOnTop
     }
