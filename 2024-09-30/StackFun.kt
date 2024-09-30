@@ -9,8 +9,24 @@ class ArrayStack : Stack {
     // Initial array of size 10
     private var array = arrayOfNulls<Int>(10)
     // Number of items in stack
-    private var size = 0
+    private var stackSize = 0
 
     override fun isEmpty(): Boolean {
-        return size == 0
+        return stackSize == 0
+    }
+
+    override fun push(item: Int) {
+        if (stackSize < array.count()) {
+            array[stackSize] = item
+            stackSize++
+        } else {
+            val newArray = arrayOfNulls<Int>(array.count()*2)
+            // Copy contents of old array
+            for (i in array.indices) {
+                newArray[i] = array[i]
+            }
+            array = newArray
+            array[stackSize] = item
+            stackSize++
+        }
     }
