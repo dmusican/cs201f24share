@@ -12,5 +12,5 @@ class ArrayStack : Stack {
     private var size = 0
 
     override fun isEmpty(): Boolean {
-        return !(size > 0)
+        return size == 0
     }
