@@ -33,6 +33,9 @@ class ArrayStack : Stack {
         if (stackSize == 0) {
             throw RuntimeException("Stack is empty!")
         }
+        // I know, based on my code above, that below
+        // can't be null, and if it is, it is a bug in my
+        // code, and I want to see that error happen
         return array[stackSize-1]!!
     }
 }
