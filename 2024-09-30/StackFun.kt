@@ -52,4 +52,6 @@ fun main() {
     myStack.push(70)
     myStack.push(18)
     println(myStack.peek())
+    myStack.pop()
+    println(myStack.peek())
 }
