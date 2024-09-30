@@ -4,3 +4,7 @@ interface Stack {
     fun peek(): Int
     fun isEmpty(): Boolean
 }
+
+class ArrayStack : Stack {
+    // Initial array of size 10
+    var array = arrayOfNulls<Int>(10)
