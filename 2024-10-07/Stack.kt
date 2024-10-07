@@ -37,6 +37,10 @@ class LinkedStack<T> : Stack<T> {
             throw RuntimeException("empty stack!")
         } else {
             val currentValue = head.item
+            head = head.next
+            return currentValue
+        }
+    }
 
 
     }
