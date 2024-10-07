@@ -25,4 +25,24 @@ class LinkedStack<T> : Stack<T> {
             return head.item
         }
     }
+
+    override fun push(newItem: T) {
+        val newNode = Node(newItem, head)
+        head = newNode
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 }
