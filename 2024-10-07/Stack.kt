@@ -32,7 +32,9 @@ class LinkedStack<T> : Stack<T> {
     }
 
 
-
+    override fun pop(): T {
+        
+    }
 
 
 
