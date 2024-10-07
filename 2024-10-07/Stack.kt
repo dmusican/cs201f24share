@@ -17,3 +17,12 @@ class LinkedStack<T> : Stack<T> {
     override fun isEmpty(): Boolean {
         return head==null
     }
+
+    override fun peek(): T {
+        if (head == null) {
+            throw RuntimeException("empty stack!")
+        } else {
+            return head.item
+        }
+    }
+}
