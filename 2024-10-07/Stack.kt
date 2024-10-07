@@ -32,6 +32,7 @@ class LinkedStack<T> : Stack<T> {
     }
 
 
+    // Could have also fixed with !!
     override fun pop(): T {
         val myHead = head
         if (myHead == null) {
