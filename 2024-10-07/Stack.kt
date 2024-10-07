@@ -33,11 +33,12 @@ class LinkedStack<T> : Stack<T> {
 
 
     override fun pop(): T {
-        if (head == null) {
+        val myHead = head
+        if (myHead == null) {
             throw RuntimeException("empty stack!")
         } else {
             val currentValue = head.item
-            head = head.next
+            head = myHead.next
             return currentValue
         }
     }
