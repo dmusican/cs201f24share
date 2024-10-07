@@ -33,7 +33,11 @@ class LinkedStack<T> : Stack<T> {
 
 
     override fun pop(): T {
-        
+        if (head == null) {
+            throw RuntimeException("empty stack!")
+        } else {
+            
+
     }
 
 
