@@ -3,11 +3,15 @@ class CircularListQueue<T> {
     private var front = -1
     private var rear = -1
 
-    fun isEmpty(): Boolean {
+    // fun isEmpty(): Boolean {
+    //     // queue is full when rear is right behind front
+    //     return !((rear + 1) % list.count() == front)
+    // }
+
+    fun isFull(): Boolean {
         // queue is full when rear is right behind front
         return !((rear + 1) % list.count() == front)
     }
-
     fun enqueue(item: T) {
         // Empty list, special case
         if (list.count() == 0) {
@@ -24,7 +28,7 @@ class CircularListQueue<T> {
         }
 
         // Queue has room
-        else if ((rear + 1) % list.count() < front) {
+        else if (!isEmpty
             rear = (rear + 1) % list.count()
             list[rear] = item
         }
