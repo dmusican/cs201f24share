@@ -15,3 +15,10 @@ class ListQueue<T> {
         } else {
             rear = rear + 1
         }
+
+        if (rear < list.count()) {
+            list[rear] = item
+        } else {
+            list.add(item)
+        }
+    }
