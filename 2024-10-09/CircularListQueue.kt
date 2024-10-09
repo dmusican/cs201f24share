@@ -1,4 +1,4 @@
-class ListQueue<T> {
+class CircularListQueue<T> {
     private var list = mutableListOf<T>()
     private var front = -1
     private var rear = -1
