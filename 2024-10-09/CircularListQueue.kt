@@ -8,13 +8,13 @@ class CircularListQueue<T> {
     }
 
     fun enqueue(item: T) {
-        // Empty queue?
-        if (front == -1) {
+        // Empty list, special case
+        if (list.count() == 0) {
+            list.add(item)
             front = 0
             rear = 0
-        } else {
-            rear = rear + 1
         }
+
 
         if (rear < list.count()) {
             list[rear] = item
