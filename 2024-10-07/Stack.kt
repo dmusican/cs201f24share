@@ -22,7 +22,7 @@ class LinkedStack<T> : Stack<T> {
         if (head == null) {
             throw RuntimeException("empty stack!")
         } else {
-            return head!!.item
+            return head.item
         }
     }
 
