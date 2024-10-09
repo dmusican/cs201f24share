@@ -4,7 +4,8 @@ class CircularListQueue<T> {
     private var rear = -1
 
     fun isEmpty(): Boolean {
-        return (front == -1)
+        // queue is full when rear is right behind front
+        return !((rear + 1) % list.count() == front)
     }
 
     fun enqueue(item: T) {
