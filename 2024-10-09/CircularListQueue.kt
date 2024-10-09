@@ -10,7 +10,7 @@ class CircularListQueue<T> {
 
     fun isFull(): Boolean {
         // queue is full when rear is right behind front
-        return !((rear + 1) % list.count() == front)
+        return ((rear + 1) % list.count() == front)
     }
     fun enqueue(item: T) {
         // Empty list, special case
