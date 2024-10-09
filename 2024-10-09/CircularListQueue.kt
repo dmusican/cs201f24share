@@ -28,7 +28,7 @@ class CircularListQueue<T> {
         }
 
         // Queue has room
-        else if (!isEmpty
+        else if (!isFull())
             rear = (rear + 1) % list.count()
             list[rear] = item
         }
