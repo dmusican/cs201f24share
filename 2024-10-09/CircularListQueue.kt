@@ -37,6 +37,9 @@ class CircularListQueue<T> {
         else {
             list.add(rear+1, item)
             rear++
+            if (front != 0) {
+                front++
+            }
         }
 
 
