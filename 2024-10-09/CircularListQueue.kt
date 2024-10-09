@@ -41,6 +41,5 @@ class CircularListQueue<T> {
                 front++
             }
         }
-
-
     }
+}
