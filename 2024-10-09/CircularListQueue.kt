@@ -22,9 +22,9 @@ class CircularListQueue<T> {
             list[0] = item
         }
 
-        if (rear < list.count()) {
+        // Queue has room
+        else if ((rear + 1) % list.count() < front) {
+            rear = (rear + 1) % list.count()
             list[rear] = item
-        } else {
-            list.add(item)
         }
     }
