@@ -35,7 +35,7 @@ class CircularListQueue<T> {
 
         // No room in the queue
         else {
-            list.add(rear, item)
+            list.add(rear+1, item)
         }
 
 
