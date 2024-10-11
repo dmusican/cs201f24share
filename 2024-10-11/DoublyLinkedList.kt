@@ -1,3 +1,3 @@
-data class Node<>
+data class Node<T>
 
 class DoublyLinkedList<T> {
