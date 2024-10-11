@@ -41,9 +41,17 @@ class DoublyLinkedList<T> {
     // Find target in the list; return position
     // (-1 if not there)
     fun search(target: T): Int {
-        return -1 // stub
+        var index = 0
+        var current = head
+        while (current != null) {
+            if (current.item == target) {
+                return index
+            }
+            index++
+            current = current.next
+        }
+        return -1
     }
-
 }
 
 
