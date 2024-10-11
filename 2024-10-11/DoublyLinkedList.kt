@@ -41,8 +41,7 @@ class DoublyLinkedList<T> {
     // Find target in the list; return position
     // (-1 if not there)
     fun search(target: T): Int {
-
-
+        return -1 // stub
     }
 
 }
@@ -56,4 +55,8 @@ fun main() {
     mylist.insertAtBeginning(3)
     mylist.printForward()
     mylist.printBackward()
+    var x = Node(1, null, null)
+    var y = Node(2, null, null)
+    println(x.hashCode())
+    println(y.hashCode())
 }
