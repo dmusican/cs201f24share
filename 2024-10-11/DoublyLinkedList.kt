@@ -19,7 +19,18 @@ class DoublyLinkedList<T> {
             head = newNode
         }
     }
+
+    fun printForward() {
+        var current = head
+        while (current != null) {
+            print(current.item)
+            current = current.next
+        }
+        println()
+
 }
+
+
 
 fun main() {
     val mylist = DoublyLinkedList<Int>()
