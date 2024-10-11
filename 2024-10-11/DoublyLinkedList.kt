@@ -63,4 +63,8 @@ fun main() {
     mylist.insertAtBeginning(3)
     mylist.printForward()
     mylist.printBackward()
+    println(mylist.search(1))
+    println(mylist.search(2))
+    println(mylist.search(3))
+    println(mylist.search(4))
 }
