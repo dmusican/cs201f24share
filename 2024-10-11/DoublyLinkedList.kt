@@ -27,6 +27,16 @@ class DoublyLinkedList<T> {
             current = current.next
         }
         println()
+    }
+
+    fun printBackward() {
+        var current = tail
+        while (current != null) {
+            print(current.item)
+            current = current.prev
+        }
+        println()
+    }
 
 }
 
@@ -37,4 +47,6 @@ fun main() {
     mylist.insertAtBeginning(1)
     mylist.insertAtBeginning(2)
     mylist.insertAtBeginning(3)
+    mylist.printForward()
+    mylist.printBackward()
 }
