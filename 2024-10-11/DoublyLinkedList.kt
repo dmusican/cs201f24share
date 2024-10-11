@@ -55,8 +55,4 @@ fun main() {
     mylist.insertAtBeginning(3)
     mylist.printForward()
     mylist.printBackward()
-    var x = Node(1, null, null)
-    var y = Node(1, null, null)
-    println(x.hashCode())
-    println(y.hashCode())
 }
