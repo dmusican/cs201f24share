@@ -72,5 +72,7 @@ fun main() {
     val nextThing = Node(11, null, null)
     thing.next = nextThing
     nextThing.prev = thing
-    println(thing)
+    // println(thing)
+    println(System.identityHashCode(thing))
+    println(System.identityHashCode(nextThing))
 }
