@@ -67,4 +67,7 @@ fun main() {
     println(mylist.search(2))
     println(mylist.search(3))
     println(mylist.search(4))
+
+    val thing = Node(10, null, null)
+    println(thing)
 }
