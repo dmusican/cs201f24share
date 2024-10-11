@@ -6,3 +6,5 @@ data class Node<T> (
 class DoublyLinkedList<T> {
     private var head: Node<T>? = null
     private var tail: Node<T>? = null
+
+    fun insertAtBeginning(item: T) {
