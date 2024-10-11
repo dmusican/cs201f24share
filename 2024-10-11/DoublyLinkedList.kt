@@ -38,6 +38,12 @@ class DoublyLinkedList<T> {
         println()
     }
 
+    // Find target in the list; return position
+    // (-1 if not there)
+    fun search(target: T): Int {
+
+    }
+
 }
 
 
