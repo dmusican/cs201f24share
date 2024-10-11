@@ -69,7 +69,7 @@ fun main() {
     println(mylist.search(4))
 
     val thing = Node(10, null, null)
-    val nextThing = Node(11, null, null)
+    val nextThing = Node(10, null, null)
     thing.next = nextThing
     nextThing.prev = thing
     // println(thing)
