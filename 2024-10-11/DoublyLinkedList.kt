@@ -73,6 +73,4 @@ fun main() {
     thing.next = nextThing
     nextThing.prev = thing
     // println(thing)
-    println(System.identityHashCode(thing))
-    println(System.identityHashCode(nextThing))
 }
