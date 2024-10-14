@@ -3,7 +3,7 @@ fun main() {
     val myMap = mutableMapOf<String, Int>()
     myMap.put("one", 1)
     myMap["two"] = 2
-    print(myMap.get("one")]
+    print(myMap.get("one"))
     print(myMap["two"])
     print(myMap["three"])
 }
