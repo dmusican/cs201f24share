@@ -10,6 +10,16 @@ myMap[12334] = "friend"
 println(myMap)
 #+end_src
 
+#+BEGIN_SRC C++ :exports both
+#include <iostream>
+
+int main()
+{
+    std::cout << "Hello world" << std::endl;
+    return 0;
+}
+#+END_SRC
+
 #+RESULTS:
 #+begin_example
 1973704800
