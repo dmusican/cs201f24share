@@ -14,6 +14,5 @@ println(myMap)
 #+begin_example
 1973704800
 {12334=friend}
-res14: kotlin.Int = 0
-res15: kotlin.String = >>>
+res17: kotlin.String = >>>
 #+end_example
