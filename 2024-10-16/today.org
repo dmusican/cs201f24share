@@ -1,0 +1,10 @@
+#+title: Today
+
+Experimenting
+
+#+begin_src kotlin :results output
+val x = "hey there"
+println(x.hashCode())
+val myMap = mutableMapOf()
+myMap[12334] = "friend"
+#+end_src
