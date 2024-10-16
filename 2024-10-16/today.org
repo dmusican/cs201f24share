@@ -2,7 +2,7 @@
 
 Experimenting...
 
-#+begin_src kotlin :exports both :results output
+#+begin_src kotlin :exports both
 val x = "hey there"
 println(x.hashCode())
 val myMap = mutableMapOf<Int, String>()
@@ -14,5 +14,5 @@ println(myMap)
 #+begin_example
 1973704800
 {12334=friend}
-res11: kotlin.String = >>>
+res13: kotlin.String = >>>
 #+end_example
