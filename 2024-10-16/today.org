@@ -11,6 +11,8 @@ println(myMap)
 #+end_src
 
 #+RESULTS:
-: 1973704800
-: {12334=friend}
-: res7: kotlin.String = >>>
+#+begin_example
+1973704800
+{12334=friend}
+res9: kotlin.String = >>>
+#+end_example
