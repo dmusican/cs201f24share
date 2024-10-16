@@ -7,4 +7,5 @@ val x = "hey there"
 println(x.hashCode())
 val myMap = mutableMapOf()
 myMap[12334] = "friend"
+println(myMap)
 #+end_src
