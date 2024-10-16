@@ -13,4 +13,4 @@ println(myMap)
 #+RESULTS:
 : 1973704800
 : {12334=friend}
-: res3: kotlin.String = >>>
+: res7: kotlin.String = >>>
