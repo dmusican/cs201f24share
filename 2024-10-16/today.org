@@ -1,6 +1,6 @@
 #+title: Today
 
-Experimenting
+Experimenting...
 
 #+begin_src kotlin :exports both
 val x = "hey there"
@@ -10,3 +10,9 @@ myMap[12334] = "friend"
 println(myMap)
 #+end_src
 
+#+RESULTS:
+#+begin_example
+1973704800
+{12334=friend}
+res11: kotlin.String = >>>
+#+end_example
