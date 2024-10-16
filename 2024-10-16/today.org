@@ -2,7 +2,7 @@
 
 Experimenting
 
-#+begin_src kotlin :results both
+#+begin_src kotlin :results output
 val x = "hey there"
 println(x.hashCode())
 val myMap = mutableMapOf<Int, String>()
