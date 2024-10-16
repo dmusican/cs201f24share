@@ -1,3 +1,4 @@
+#+STARTUP: showall
 #+title: Today
 
 Experimenting
