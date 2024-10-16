@@ -5,7 +5,28 @@ Experimenting
 #+begin_src kotlin :results output
 val x = "hey there"
 println(x.hashCode())
-val myMap = mutableMapOf()
+val myMap = mutableMapOf<Int, String>()
 myMap[12334] = "friend"
 println(myMap)
 #+end_src
+
+#+RESULTS:
+#+begin_example
+error: not enough information to infer type variable K
+val myMap = mutableMapOf()
+            ^
+error: overload resolution ambiguity:
+public inline fun println(message: Any?): Unit defined in kotlin.io
+public inline fun println(message: Boolean): Unit defined in kotlin.io
+public inline fun println(message: Byte): Unit defined in kotlin.io
+public inline fun println(message: Char): Unit defined in kotlin.io
+public inline fun println(message: CharArray): Unit defined in kotlin.io
+public inline fun println(message: Double): Unit defined in kotlin.io
+public inline fun println(message: Float): Unit defined in kotlin.io
+public inline fun println(message: Int): Unit defined in kotlin.io
+public inline fun println(message: Long): Unit defined in kotlin.io
+public inline fun println(message: Short): Unit defined in kotlin.io
+println(myMap)
+^
+res1: kotlin.String = >>>
+#+end_example
