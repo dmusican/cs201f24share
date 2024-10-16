@@ -16,3 +16,19 @@ println(myMap)
 {12334=friend}
 res9: kotlin.String = >>>
 #+end_example
+
+
+#+BEGIN_SRC C++ :exports both
+#include <iostream>
+
+int main()
+{
+    std::cout << "Hello world" << std::endl;
+    return 0;
+}
+#+END_SRC
+
+#+RESULTS:
+#+begin_example
+Hello world
+#+end_example
