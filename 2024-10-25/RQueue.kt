@@ -21,6 +21,19 @@ class RQueue<T> {
             return
         }
 
+        if (inside == null) {
+            inside = RQueue<T>()
+        }
+
+        inside.enqueue(rear)
+        rear = value
+    }
+
+
+
+
+        // recursive case
+
 
     }
 
