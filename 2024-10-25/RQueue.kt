@@ -26,7 +26,7 @@ class RQueue<T> {
             inside = RQueue<T>()
         }
 
-        inside.enqueue(rear)
+        inside!!.enqueue(rear!!)
         rear = value
     }
 
