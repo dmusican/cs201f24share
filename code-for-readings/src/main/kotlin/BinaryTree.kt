@@ -1,6 +1,10 @@
 // Tree traversal in Kotlin
 // Ported to Kotlin by Dave Musicant from Java code at
 // https://www.programiz.com/dsa/tree-traversal
+// https://www.programiz.com/dsa/binary-tree
+// (These two programs do the same thing, they're just
+// written by different people with slightly different styles.
+// I chose a little of each.)
 
 data class Node(var item: Int,
                 var left: Node? = null,
@@ -12,15 +16,11 @@ class BinaryTree {
     var root: Node? = null
 
     fun postorder(node: Node?) {
-        if (node == null)
-            return
-
-        // Traverse left
-        postorder(node.left)
-        // Traverse right
-        postorder(node.right)
-        // Traverse root
-        print("${node.item}->")
+        if (node != null) {
+            postorder(node.left)
+            postorder(node.right)
+            print("${node.item}->")
+        }
     }
 
     fun inorder(node: Node?) {
