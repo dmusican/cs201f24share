@@ -11,3 +11,7 @@ fun fact(n: Int): Int {
         return n * fact(n-1)
     }
 }
+
+fun main() {
+    println(fact(5))
+}
