@@ -32,17 +32,12 @@ class BinaryTree {
     }
 
     fun preorder(node: Node?) {
-        if (node == null)
-            return
-
-        // Traverse root
-        print("${node.item}->")
-        // Traverse left
-        preorder(node.left)
-        // Traverse right
-        preorder(node.right)
+        if (node != null) {
+            print("${node.item}->")
+            preorder(node.left)
+            preorder(node.right)
+        }
     }
-
 }
 
 fun main() {
