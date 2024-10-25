@@ -1,4 +1,6 @@
-// Tree traversal in Java
+// Tree traversal in Kotlin
+// Ported to Kotlin by Dave Musicant from Java code at
+// https://www.programiz.com/dsa/tree-traversal
 
 class Node {
   int item;
