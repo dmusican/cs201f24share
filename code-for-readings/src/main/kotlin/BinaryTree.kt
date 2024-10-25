@@ -2,75 +2,69 @@
 // Ported to Kotlin by Dave Musicant from Java code at
 // https://www.programiz.com/dsa/tree-traversal
 
-class Node {
-  int item;
-  Node left, right;
-
-  public Node(int key) {
-  item = key;
-  left = right = null;
-  }
-}
+data class Node(var item: Int,
+                var left: Node? = null,
+                var right: Node? = null)
 
 class BinaryTree {
-  // Root of Binary Tree
-  Node root;
 
-  BinaryTree() {
-  root = null;
-  }
+    // Root of Binary Tree
+    var root: Node? = null
 
-  void postorder(Node node) {
-  if (node == null)
-    return;
+    fun postorder(node: Node?) {
+        if (node == null)
+            return
 
-  // Traverse left
-  postorder(node.left);
-  // Traverse right
-  postorder(node.right);
-  // Traverse root
-  System.out.print(node.item + "->");
-  }
+        // Traverse left
+        postorder(node.left)
+        // Traverse right
+        postorder(node.right)
+        // Traverse root
+        print("${node.item}->")
+    }
 
-  void inorder(Node node) {
-  if (node == null)
-    return;
+    fun inorder(node: Node?) {
+        if (node == null)
+            return
 
-  // Traverse left
-  inorder(node.left);
-  // Traverse root
-  System.out.print(node.item + "->");
-  // Traverse right
-  inorder(node.right);
-  }
+        // Traverse left
+        inorder(node.left)
+        // Traverse root
+        print("${node.item}->")
+        // Traverse right
+        inorder(node.right)
+    }
 
-  void preorder(Node node) {
-  if (node == null)
-    return;
+    fun preorder(node: Node?) {
+        if (node == null)
+            return
 
-  // Traverse root
-  System.out.print(node.item + "->");
-  // Traverse left
-  preorder(node.left);
-  // Traverse right
-  preorder(node.right);
-  }
+        // Traverse root
+        print("${node.item}->")
+        // Traverse left
+        preorder(node.left)
+        // Traverse right
+        preorder(node.right)
+    }
 
-  public static void main(String[] args) {
-  BinaryTree tree = new BinaryTree();
-  tree.root = new Node(1);
-  tree.root.left = new Node(12);
-  tree.root.right = new Node(9);
-  tree.root.left.left = new Node(5);
-  tree.root.left.right = new Node(6);
+}
 
-  System.out.println("Inorder traversal");
-  tree.inorder(tree.root);
+fun main() {
+    val tree = BinaryTree()
+    tree.root = Node(1)
+    tree.root!!.left = Node(12)
+    tree.root!!.right = Node(9)
+    tree.root!!.left!!.left = Node(5)
+    tree.root!!.left!!.right = Node(6)
 
-  System.out.println("\nPreorder traversal ");
-  tree.preorder(tree.root);
+    println("Inorder traversal")
+    tree.inorder(tree.root)
 
-  System.out.println("\nPostorder traversal");
-  tree.postorder(tree.root);
-  }
+    println()
+    println("Preorder traversal ")
+    tree.preorder(tree.root)
+
+    println()
+    println("Postorder traversal")
+    tree.postorder(tree.root)
 }
