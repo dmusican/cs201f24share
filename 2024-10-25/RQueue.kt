@@ -36,6 +36,22 @@ class RQueue<T> {
 
     override fun toString(): String {
 
+        if (front == null) {
+            return ""
+        }
+
+        if (rear == null) {
+            return "$front"
+        }
+
+        // Recursive case
+        var result = "$front"
+        if (inside != null) {
+            result += inside!!.toString()
+        }
+        result += "$rear"
+        return result
+
     }
 
 }
