@@ -9,6 +9,18 @@ class RQueue<T> {
     var inside: RQueue<T>? = null
 
     fun enqueue(value: T) {
+        // no items
+        if (front == null) {
+            front = value
+            return
+        }
+
+        // just one item
+        if (rear == null) {
+            rear = value
+            return
+        }
+
 
     }
 
