@@ -24,15 +24,11 @@ class BinaryTree {
     }
 
     fun inorder(node: Node?) {
-        if (node == null)
-            return
-
-        // Traverse left
-        inorder(node.left)
-        // Traverse root
-        print("${node.item}->")
-        // Traverse right
-        inorder(node.right)
+        if (node != null) {
+            inorder(node.left)
+            print("${node.item}->")
+            inorder(node.right)
+        }
     }
 
     fun preorder(node: Node?) {
