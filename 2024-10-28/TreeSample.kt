@@ -10,7 +10,7 @@ fun <T> displayTree(current: TreeNode<T>?,
         return
     }
 
-    println(current.data)
+    println(prefix + current.data)
     displayTree(current.leftChild, prefix + " ")
     displayTree(current.rightChild, prefix + " ")
 
