@@ -21,6 +21,8 @@ fun <T> countNodes(current: TreeNode<T>?): Int {
     } else {
         return 1 + countNodes(current.leftChild)
             + countNodes(current.rightChild)
+    }
+}
 
 
 
