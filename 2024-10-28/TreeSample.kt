@@ -11,8 +11,8 @@ fun <T> displayTree(current: TreeNode<T>?,
     }
 
     println(current.data)
-    displayTree(current.leftChild)
-    displayTree(current.rightChild)
+    displayTree(current.leftChild, prefix + " ")
+    displayTree(current.rightChild, prefix + " ")
 
 }
 
