@@ -22,4 +22,5 @@ fun main() {
     root.rightChild = TreeNode("provost mattson")
     root.rightChild!!.leftChild =
         TreeNode("dave musicant")
+    displayTree(root)
 }
