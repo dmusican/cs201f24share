@@ -27,12 +27,14 @@ fun makeTree(n: Int, height: Int): TreeNode<Int> {
 }
 
 fun main() {
-    val root = TreeNode("allyb")
-    root.leftChild = TreeNode("dean livingston")
-    root.leftChild!!.leftChild =
-        TreeNode("dean williams")
-    root.rightChild = TreeNode("provost mattson")
-    root.rightChild!!.leftChild =
-        TreeNode("dave musicant")
-    displayTree(root)
+    var mytree = makeTree(1, 3)
+    displayTree(mytree)
+    // val root = TreeNode("allyb")
+    // root.leftChild = TreeNode("dean livingston")
+    // root.leftChild!!.leftChild =
+    //     TreeNode("dean williams")
+    // root.rightChild = TreeNode("provost mattson")
+    // root.rightChild!!.leftChild =
+    //     TreeNode("dave musicant")
+    // displayTree(root)
 }
