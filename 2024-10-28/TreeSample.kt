@@ -4,3 +4,5 @@ data class TreeNode<T>(
     var leftChild: TreeNode<T>? = null,
     var rightChild: TreeNode<T>? = null)
 )
+
+fun main() {
