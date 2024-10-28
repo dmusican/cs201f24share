@@ -9,7 +9,9 @@ fun displayTree(current: TreeNode<T>?) {
         return
     }
 
-
+    println(current.data)
+    displayTree(current.left)
+    displayTree(current.right)
 
 }
 
