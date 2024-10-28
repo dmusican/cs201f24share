@@ -16,6 +16,14 @@ fun <T> displayTree(current: TreeNode<T>?,
 
 }
 
+fun makeTree(n: Int, height: Int) {
+    // Make a node
+    var tree = TreeNode(n)
+    if (height > 0) {
+        tree.leftChild = makeTree(n+1, height-1)
+        tree.rightChild = makeTree(n+2, height-1)
+    }
+}
 
 fun main() {
     val root = TreeNode("allyb")
