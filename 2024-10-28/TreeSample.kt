@@ -10,8 +10,8 @@ fun displayTree(current: TreeNode<T>?) {
     }
 
     println(current.data)
-    displayTree(current.left)
-    displayTree(current.right)
+    displayTree(current.leftChild)
+    displayTree(current.rightChild)
 
 }
 
