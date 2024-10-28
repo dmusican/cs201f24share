@@ -5,6 +5,10 @@ data class TreeNode<T>(
     var rightChild: TreeNode<T>? = null)
 
 fun displayTree(current: TreeNode<T>?) {
+    if (current == null) {
+        return
+    }
+
 
 
 }
