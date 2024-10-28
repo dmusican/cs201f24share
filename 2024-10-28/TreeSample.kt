@@ -8,5 +8,5 @@ fun main() {
     val root = TreeNode("allyb")
     root.leftChild = TreeNode("dean livingston")
     root.rightChild = TreeNode("provost mattson")
-    root.leftChild!!.leftChild =
+    root.rightChild!!.leftChild =
         TreeNode("dave musicant")
