@@ -4,7 +4,8 @@ data class TreeNode<T>(
     var leftChild: TreeNode<T>? = null,
     var rightChild: TreeNode<T>? = null)
 
-fun <T> displayTree(current: TreeNode<T>?) {
+fun <T> displayTree(current: TreeNode<T>?,
+                    prefix: String = "") {
     if (current == null) {
         return
     }
