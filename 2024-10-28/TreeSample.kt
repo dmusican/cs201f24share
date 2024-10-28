@@ -16,7 +16,7 @@ fun <T> displayTree(current: TreeNode<T>?,
 
 }
 
-fun makeTree(n: Int, height: Int) {
+fun <T> makeTree(n: Int, height: Int): TreeNode<T> {
     // Make a node
     var tree = TreeNode(n)
     if (height > 0) {
