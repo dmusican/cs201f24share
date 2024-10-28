@@ -23,6 +23,7 @@ fun makeTree(n: Int, height: Int) {
         tree.leftChild = makeTree(n+1, height-1)
         tree.rightChild = makeTree(n+2, height-1)
     }
+    return tree
 }
 
 fun main() {
