@@ -38,7 +38,7 @@ fun makeTree(n: Int, height: Int): TreeNode<Int> {
 fun main() {
     var mytree = makeTree(1, 3)
     displayTree(mytree)
-    println(countNodes(mytre))
+    println(countNodes(mytree))
     // val root = TreeNode("allyb")
     // root.leftChild = TreeNode("dean livingston")
     // root.leftChild!!.leftChild =
