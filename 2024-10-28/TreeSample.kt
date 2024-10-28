@@ -20,6 +20,8 @@ fun <T> displayTree(current: TreeNode<T>?,
 fun main() {
     val root = TreeNode("allyb")
     root.leftChild = TreeNode("dean livingston")
+    root.leftChild!!.leftChild =
+        TreeNode("dean williams")
     root.rightChild = TreeNode("provost mattson")
     root.rightChild!!.leftChild =
         TreeNode("dave musicant")
