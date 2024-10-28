@@ -13,8 +13,16 @@ fun <T> displayTree(current: TreeNode<T>?,
     displayTree(current.rightChild, prefix + " ")
     println(prefix + current.data)
     displayTree(current.leftChild, prefix + " ")
-
 }
+
+fun <T> countNodes(current: TreeNode<T>?): Int {
+    if (current == null) {
+        return 0
+    } else {
+        return 1 + countNodes(current.leftChild)
+            + countNodes(current.rightChild)
+
+
 
 fun makeTree(n: Int, height: Int): TreeNode<Int> {
     // Make a node
