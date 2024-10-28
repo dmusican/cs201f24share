@@ -10,9 +10,9 @@ fun <T> displayTree(current: TreeNode<T>?,
         return
     }
 
+    displayTree(current.rightChild, prefix + " ")
     println(prefix + current.data)
     displayTree(current.leftChild, prefix + " ")
-    displayTree(current.rightChild, prefix + " ")
 
 }
 
