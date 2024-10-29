@@ -88,17 +88,17 @@ fun deleteKey(root: TrieNode, word: String): Boolean {
             } else {
                 var count = 0
                 // Count the number of non-null child nodes
-                for (int i = 0; i < 26; i++) {
+                for (i in 0..<26) {
                     if (currentNode.childNode[i] != null)
-                        count++;
+                        count++
                 }
 
                 if (count > 1) {
                     // If there are more than one child, store the last branch information
-                    lastBranchNode = currentNode;
-                    lastBranchChar = c;
+                    lastBranchNode = currentNode
+                    lastBranchChar = c
                 }
-                currentNode = currentNode.childNode[c - 'a'];
+                currentNode = currentNode.childNode[c - 'a']!!
             }
         }
 
