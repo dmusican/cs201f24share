@@ -77,57 +77,56 @@ fun search(root: TrieNode, key: String): Boolean {
 }
 
 fun deleteKey(root: TrieNode, word: String): Boolean {
-        var currentNode = root
-        var lastBranchNode: TrieNode? = null
-        var lastBranchChar = 'a'
+    var currentNode = root
+    var lastBranchNode: TrieNode? = null
+    var lastBranchChar = 'a'
 
-        for (c in word) {
-            if (currentNode.childNode[c - 'a'] == null) {
-                // If the current node has no child, the word is not present
-                return false
-            } else {
-                var count = 0
-                // Count the number of non-null child nodes
-                for (i in 0..<26) {
-                    if (currentNode.childNode[i] != null)
-                        count++
-                }
-
-                if (count > 1) {
-                    // If there are more than one child, store the last branch information
-                    lastBranchNode = currentNode
-                    lastBranchChar = c
-                }
-                currentNode = currentNode.childNode[c - 'a']!!
+    for (c in word) {
+        if (currentNode.childNode[c - 'a'] == null) {
+            // If the current node has no child, the word is not present
+            return false
+        } else {
+            var count = 0
+            // Count the number of non-null child nodes
+            for (i in 0..<26) {
+                if (currentNode.childNode[i] != null)
+                    count++
             }
-        }
 
-        var count = 0
-        // Count the number of non-null child nodes at the last character
-        for (i in 0..<26) {
-            if (currentNode.childNode[i] != null)
-                count++
+            if (count > 1) {
+                // If there are more than one child, store the last branch information
+                lastBranchNode = currentNode
+                lastBranchChar = c
+            }
+            currentNode = currentNode.childNode[c - 'a']!!
         }
+    }
 
-        // Case 1: The deleted word is a prefix of other words in Trie.
-        if (count > 0) {
-            // Decrement the word count and indicate successful deletion
-            currentNode.wordCount--
-            return true
-        }
+    var count = 0
+    // Count the number of non-null child nodes at the last character
+    for (i in 0..<26) {
+        if (currentNode.childNode[i] != null)
+            count++
+    }
 
-        // Case 2: The deleted word shares a common prefix with other words in Trie.
-        if (lastBranchNode != null) {
-            // Remove the link to the deleted word
-            lastBranchNode.childNode[lastBranchChar - 'a'] = null
-            return true
-        }
-        // Case 3: The deleted word does not share any common prefix with other words in Trie.
-        else {
-            // Remove the link to the deleted word from the root
-            root.childNode[word[0] - 'a'] = null
-            return true
-        }
+    // Case 1: The deleted word is a prefix of other words in Trie.
+    if (count > 0) {
+        // Decrement the word count and indicate successful deletion
+        currentNode.wordCount--
+        return true
+    }
+
+    // Case 2: The deleted word shares a common prefix with other words in Trie.
+    if (lastBranchNode != null) {
+        // Remove the link to the deleted word
+        lastBranchNode.childNode[lastBranchChar - 'a'] = null
+        return true
+    }
+    // Case 3: The deleted word does not share any common prefix with other words in Trie.
+    else {
+        // Remove the link to the deleted word from the root
+        root.childNode[word[0] - 'a'] = null
+        return true
     }
 }
 
