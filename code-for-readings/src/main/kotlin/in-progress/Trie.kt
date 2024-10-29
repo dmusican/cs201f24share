@@ -142,13 +142,12 @@ fun main() {
     // number of insert operations in the Trie
     val n = inputStrings.count()
 
-    for (int i = 0; i < n; i++) {
-        insert_key(root, inputStrings[i]);
+    for (i in 0..<n) {
+        insert(root, inputStrings[i])
     }
 
     // Stores the strings that we want to search in the Trie
-    vector<string> searchQueryStrings
-        = { "do", "geek", "bat" };
+    val searchQueryStrings = listOf("do", "geek", "bat")
 
     // number of search operations in the Trie
     int searchQueries = searchQueryStrings.size();
