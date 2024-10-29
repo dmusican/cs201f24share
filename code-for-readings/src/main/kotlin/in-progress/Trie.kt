@@ -84,9 +84,9 @@ fun deleteKey(root: TrieNode, word: String): Boolean {
         for (c in word) {
             if (currentNode.childNode[c - 'a'] == null) {
                 // If the current node has no child, the word is not present
-                return false;
+                return false
             } else {
-                int count = 0;
+                var count = 0
                 // Count the number of non-null child nodes
                 for (int i = 0; i < 26; i++) {
                     if (currentNode.childNode[i] != null)
