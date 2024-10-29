@@ -167,6 +167,4 @@ fun main() {
             println("The query string is not present in the Trie")
         }
     }
-
-    return 0;
 }
