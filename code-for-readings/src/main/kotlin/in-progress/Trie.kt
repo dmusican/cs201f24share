@@ -140,7 +140,7 @@ fun main() {
     val inputStrings = listOf("and", "ant", "do", "geek", "dad", "ball")
 
     // number of insert operations in the Trie
-    int n = inputStrings.size();
+    int n = inputStrings.size()
 
     for (int i = 0; i < n; i++) {
         insert_key(root, inputStrings[i]);
