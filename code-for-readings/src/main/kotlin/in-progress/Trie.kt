@@ -150,20 +150,15 @@ fun main() {
     val searchQueryStrings = listOf("do", "geek", "bat")
 
     // number of search operations in the Trie
-    int searchQueries = searchQueryStrings.size();
+    val searchQueries = searchQueryStrings.count()
 
-    for (int i = 0; i < searchQueries; i++) {
-        cout << "Query String: " << searchQueryStrings[i]
-             << "\n";
-        if (search_key(root, searchQueryStrings[i])) {
-            // the queryString is present in the Trie
-            cout << "The query string is present in the "
-                    "Trie\n";
+    for (i in 0..<searchQueries) {
+        println("Query String: ${searchQueryStrings[i]}")
+        if (search(root, searchQueryStrings[i])) {
+            println("The query string is present in the Trie")
         }
         else {
-            // the queryString is not present in the Trie
-            cout << "The query string is not present in "
-                    "the Trie\n";
+            println("The query string is not present in the Trie")
         }
     }
 
