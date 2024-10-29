@@ -159,22 +159,12 @@ fun main() {
     // stores the strings that we want to delete from the Trie
     val deleteQueryStrings = listOf("geek", "tea")
 
-    // number of delete operations from the Trie
-    int deleteQueries = deleteQueryStrings.size();
-
-    for (int i = 0; i < deleteQueries; i++) {
-        cout << "Query String: " << deleteQueryStrings[i]
-             << "\n";
-        if (delete_key(root, deleteQueryStrings[i])) {
-            // The queryString is successfully deleted from
-            // the Trie
-            cout << "The query string is successfully "
-                    "deleted\n";
-        }
+    for (deleteQueryString in deleteQueryStrings) {
+        println("Query String: $deleteQueryString")
+        if (deleteKey(root, deleteQueryString)) {
+            println("The query string is successfully deleted")
         else {
-            // The query string is not present in the Trie
-            cout << "The query string is not present in "
-                    "the Trie\n";
+            println("The query string is not present in the Trie")
         }
     }
 
