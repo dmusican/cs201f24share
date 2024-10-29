@@ -139,21 +139,15 @@ fun main() {
     // Trie
     val inputStrings = listOf("and", "ant", "do", "geek", "dad", "ball")
 
-    // number of insert operations in the Trie
-    val n = inputStrings.count()
-
-    for (i in 0..<n) {
-        insert(root, inputStrings[i])
+    for (inputString in inputStrings) {
+        insert(root, inputString)
     }
 
     // Stores the strings that we want to search in the Trie
     val searchQueryStrings = listOf("do", "geek", "bat")
 
-    // number of search operations in the Trie
-    val searchQueries = searchQueryStrings.count()
-
-    for (i in 0..<searchQueries) {
-        println("Query String: ${searchQueryStrings[i]}")
+    for (searchQueryString in searchQueryStrings) {
+        println("Query String: $searchQueryString")
         if (search(root, searchQueryStrings[i])) {
             println("The query string is present in the Trie")
         }
@@ -162,9 +156,8 @@ fun main() {
         }
     }
 
-    // stores the strings that we want to delete from the
-    // Trie
-    vector<string> deleteQueryStrings = { "geek", "tea" };
+    // stores the strings that we want to delete from the Trie
+    val deleteQueryStrings = listOf("geek", "tea")
 
     // number of delete operations from the Trie
     int deleteQueries = deleteQueryStrings.size();
