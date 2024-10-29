@@ -148,7 +148,7 @@ fun main() {
 
     for (searchQueryString in searchQueryStrings) {
         println("Query String: $searchQueryString")
-        if (search(root, searchQueryStrings[i])) {
+        if (search(root, searchQueryString)) {
             println("The query string is present in the Trie")
         }
         else {
