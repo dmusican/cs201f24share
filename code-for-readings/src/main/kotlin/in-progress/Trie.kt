@@ -132,5 +132,64 @@ fun deleteKey(root: TrieNode, word: String): Boolean {
 }
 
 fun main() {
-    println(TrieNode())
+    // Make a root node for the Trie
+    val root = TrieNode()
+
+    // Stores the strings that we want to insert in the
+    // Trie
+    val inputStrings = listOf("and", "ant", "do", "geek", "dad", "ball")
+
+    // number of insert operations in the Trie
+    int n = inputStrings.size();
+
+    for (int i = 0; i < n; i++) {
+        insert_key(root, inputStrings[i]);
+    }
+
+    // Stores the strings that we want to search in the Trie
+    vector<string> searchQueryStrings
+        = { "do", "geek", "bat" };
+
+    // number of search operations in the Trie
+    int searchQueries = searchQueryStrings.size();
+
+    for (int i = 0; i < searchQueries; i++) {
+        cout << "Query String: " << searchQueryStrings[i]
+             << "\n";
+        if (search_key(root, searchQueryStrings[i])) {
+            // the queryString is present in the Trie
+            cout << "The query string is present in the "
+                    "Trie\n";
+        }
+        else {
+            // the queryString is not present in the Trie
+            cout << "The query string is not present in "
+                    "the Trie\n";
+        }
+    }
+
+    // stores the strings that we want to delete from the
+    // Trie
+    vector<string> deleteQueryStrings = { "geek", "tea" };
+
+    // number of delete operations from the Trie
+    int deleteQueries = deleteQueryStrings.size();
+
+    for (int i = 0; i < deleteQueries; i++) {
+        cout << "Query String: " << deleteQueryStrings[i]
+             << "\n";
+        if (delete_key(root, deleteQueryStrings[i])) {
+            // The queryString is successfully deleted from
+            // the Trie
+            cout << "The query string is successfully "
+                    "deleted\n";
+        }
+        else {
+            // The query string is not present in the Trie
+            cout << "The query string is not present in "
+                    "the Trie\n";
+        }
+    }
+
+    return 0;
 }
