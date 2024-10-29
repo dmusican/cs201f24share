@@ -163,6 +163,7 @@ fun main() {
         println("Query String: $deleteQueryString")
         if (deleteKey(root, deleteQueryString)) {
             println("The query string is successfully deleted")
+        }
         else {
             println("The query string is not present in the Trie")
         }
