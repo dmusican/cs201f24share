@@ -54,6 +54,27 @@ fun isPrefixExist(root: TrieNode, key: String): Boolean {
     return true
 }
 
+// Returns true if key present in trie, else false
+fun search(root: TrieNode, key: String): Boolean {
+    // Initialize the currentNode
+    // with the root node
+    var currentNode = root
+
+    for (letter in key) {
+        val index = letter - 'a'
+
+        // Check if the node exist for the current character in the Trie.
+        if (currentNode.childNode[index] == null) {
+            return false
+        }
+
+        // Move the currentNode to the already existing node for current
+        // character.
+        currentNode = currentNode.childNode[index]!!
+    }
+
+    return (currentNode.wordCount > 0)
+}
 fun main() {
     println(TrieNode())
 }
