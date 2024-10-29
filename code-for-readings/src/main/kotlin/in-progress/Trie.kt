@@ -81,7 +81,7 @@ fun deleteKey(root: TrieNode, word: String): Boolean {
         var lastBranchNode: TrieNode? = null
         var lastBranchChar = 'a'
 
-        for (char c : word.toCharArray()) {
+        for (c in word) {
             if (currentNode.childNode[c - 'a'] == null) {
                 // If the current node has no child, the word is not present
                 return false;
