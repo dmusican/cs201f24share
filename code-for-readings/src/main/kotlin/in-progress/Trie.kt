@@ -75,6 +75,9 @@ fun search(root: TrieNode, key: String): Boolean {
 
     return (currentNode.wordCount > 0)
 }
+
+
+
 fun main() {
     println(TrieNode())
 }
