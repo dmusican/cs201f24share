@@ -28,3 +28,4 @@ class BSTSet<T> {
             subtree.right = insert(item, subtree.right)
         }
         return subtree
+    }
