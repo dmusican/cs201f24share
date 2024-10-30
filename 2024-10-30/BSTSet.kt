@@ -14,20 +14,20 @@ class BSTSet<T: Comparable<T>> {
         root = insert(item, root)
     }
 
-    private fun insert(item: T, subtree: Node<T>?): Node<T> {
-        if (subtree == null) {
+    private fun insert(item: T, subroot: Node<T>?): Node<T> {
+        if (subroot == null) {
             return Node<T>(item)
         }
-        if (subtree.key == item) {
+        if (subroot.key == item) {
             throw RuntimeException("Item is already there.")
         }
 
-        if (item < subtree.key) {
-            subtree.left = insert(item, subtree.left)
+        if (item < subroot.key) {
+            subroot.left = insert(item, subroot.left)
         } else {
             // not equal, already checked
-            subtree.right = insert(item, subtree.right)
+            subroot.right = insert(item, subroot.right)
         }
-        return subtree
+        return subroot
     }
 }
