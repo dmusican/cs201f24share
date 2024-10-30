@@ -17,3 +17,14 @@ class BSTSet<T> {
         if (subtree == null) {
             return Node<T>(item)
         }
+        if (subtree.key == item) {
+            throw RuntimeException("Item is already there.")
+        }
+
+        if (item < subtree.key) {
+            subtree.left = insert(item, subtree.left)
+        } else {
+            // not equal, already checked
+            subtree.right = insert(item, subtree.right)
+        }
+        return subtree
