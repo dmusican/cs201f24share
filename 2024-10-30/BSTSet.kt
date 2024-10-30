@@ -14,6 +14,8 @@ class BSTSet<T: Comparable<T>> {
         root = insert(item, root)
     }
 
+    // (in class, I called subroot "subtree" but it confused
+    // everyone everywhere so I changed it
     private fun insert(item: T, subroot: Node<T>?): Node<T> {
         if (subroot == null) {
             return Node<T>(item)
