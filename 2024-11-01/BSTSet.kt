@@ -29,3 +29,5 @@ fun main() {
     mytree.insert(2)
     mytree.insert(1)
     mytree.insert(7)
+    println(mytree.count())
+}
