@@ -21,11 +21,11 @@ class BSTSet<T: Comparable<T>> {
         }
         return subroot
     }
-
-
-    }
 }
 
 fun main() {
     val mytree = BSTSet<Int>()
     mytree.insert(5)
+    mytree.insert(2)
+    mytree.insert(1)
+    mytree.insert(7)
