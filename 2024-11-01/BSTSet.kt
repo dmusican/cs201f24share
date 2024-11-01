@@ -4,3 +4,7 @@ class BSTSet<T: Comparable<T>> {
                        var right: Node<T>? = null)
 
     private var root: Node<T>? = null
+
+    fun insert(item: T, subroot: Node<T>?) {
+
+    }
