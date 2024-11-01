@@ -30,7 +30,9 @@ class BSTSet<T: Comparable<T>> {
         if (subroot == null) {
             return 0
         } else {
-            return 1 + _count(subroot.left) + _count(subroot.right)
+            return 1 +
+                _count(subroot.left) +
+                _count(subroot.right)
         }
     }
 }
