@@ -12,6 +12,7 @@ class BSTSet<T: Comparable<T>> {
     private fun _insert(item: T, subroot: Node<T>?): Node<T> {
         if (subroot == null) {
             return Node<T>(item)
+        }
 
 
     }
