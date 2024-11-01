@@ -21,6 +21,18 @@ class BSTSet<T: Comparable<T>> {
         }
         return subroot
     }
+
+    fun count(): Int {
+        return _count(root)
+    }
+
+    fun _count(subroot: Node<T>?): Int {
+        if (subroot == null) {
+            return 0
+        } else {
+            return 1 + _count(subroot.left) + _count(subroot.right)
+        }
+    }
 }
 
 fun main() {
