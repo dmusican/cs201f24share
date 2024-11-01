@@ -12,7 +12,15 @@ class BSTSet<T: Comparable<T>> {
     private fun _insert(item: T, subroot: Node<T>?): Node<T> {
         if (subroot == null) {
             return Node<T>(item)
+        } else if (item < subroot.key) {
+            subroot.left = _insert(item, subroot.left)
+        } else if (item > subroot.key) {
+            subroot.right = _insert(item, subroot.right)
+        } else {
+            throw RuntimeException("Already present.")
         }
+        return subroot
+    }
 
 
     }
