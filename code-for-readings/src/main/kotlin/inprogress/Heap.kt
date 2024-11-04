@@ -22,7 +22,8 @@ class Heap {
     }
 
     fun insert(hT: MutableList<Int>, newNum: Int) {
-        if (hT.count() == 0) {
+        val size = hT.count()
+        if (size == 0) {
             hT.add(newNum)
         } else {
             hT.add(newNum)
