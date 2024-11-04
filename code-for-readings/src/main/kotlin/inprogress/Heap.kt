@@ -21,39 +21,36 @@ class Heap {
         }
     }
 
-    void insert(ArrayList<Integer> hT, int newNum) {
-        int size = hT.size()
-        if (size == 0) {
+    fun insert(hT: MutableList<Int>, newNum: Int) {
+        if (hT.count() == 0) {
             hT.add(newNum)
         } else {
             hT.add(newNum)
-            for (int i = size / 2 - 1 i >= 0 i--) {
+            for (i in (size/2-1) downTo 0) {
                 heapify(hT, i)
             }
         }
     }
 
-    void deleteNode(ArrayList<Integer> hT, int num)
-    {
-        int size = hT.size()
-        int i
-        for (i = 0 i < size i++)
-        {
-            if (num == hT.get(i))
+    fun deleteNode(hT: MutableList<Int>, num: Int) {
+        val size = hT.count()
+        var deleteIndex: Int = -1
+        for (i in 0..<size) {
+            if (num == hT.get(i)) {
+                deleteIndex = i
                 break
+            }
         }
 
-        int temp = hT.get(i)
-        hT.set(i, hT.get(size-1))
+        var temp = hT.get(deleteIndex)
+        hT.set(deleteIndex, hT.get(size-1))
         hT.set(size-1, temp)
 
         hT.remove(size-1)
-        for (int j = size / 2 - 1 j >= 0 j--)
-        {
+        for (j in size/2-1 downTo 0)
             heapify(hT, j)
         }
     }
-
 }
 
 fun main() {
