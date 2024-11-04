@@ -62,23 +62,24 @@ class Heap {
         System.out.println();
     }
 
-    public static void main(String args[]) {
+}
 
-        ArrayList<Integer> array = new ArrayList<Integer>();
-        int size = array.size();
+fun main() {
 
-        Heap h = new Heap();
-        h.insert(array, 3);
-        h.insert(array, 4);
-        h.insert(array, 9);
-        h.insert(array, 5);
-        h.insert(array, 2);
+    ArrayList<Integer> array = new ArrayList<Integer>();
+    int size = array.size();
 
-        System.out.println("Max-Heap array: ");
-        h.printArray(array, size);
+    Heap h = new Heap();
+    h.insert(array, 3);
+    h.insert(array, 4);
+    h.insert(array, 9);
+    h.insert(array, 5);
+    h.insert(array, 2);
 
-        h.deleteNode(array, 4);
-        System.out.println("After deleting an element: ");
-        h.printArray(array, size);
-    }
+    System.out.println("Max-Heap array: ");
+    h.printArray(array, size);
+
+    h.deleteNode(array, 4);
+    System.out.println("After deleting an element: ");
+    h.printArray(array, size);
 }
