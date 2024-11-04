@@ -4,17 +4,16 @@
 
 class Heap {
     fun heapify(hT: MutableList<Int>, i: Int) {
-        int size = hT.size()
-        int largest = i
-        int l = 2 * i + 1
-        int r = 2 * i + 2
-        if (l < size && hT.get(l) > hT.get(largest))
+        var largest = i
+        var l = 2 * i + 1
+        var r = 2 * i + 2
+        if (l < hT.count() && hT.get(l) > hT.get(largest))
             largest = l
-        if (r < size && hT.get(r) > hT.get(largest))
+        if (r < hT.count() && hT.get(r) > hT.get(largest))
             largest = r
 
         if (largest != i) {
-            int temp = hT.get(largest)
+            val temp = hT.get(largest)
             hT.set(largest, hT.get(i))
             hT.set(i, temp)
 
