@@ -3,7 +3,7 @@
 // Ported by Dave Musicant
 
 class Heap {
-    void heapify(ArrayList<Integer> hT, int i) {
+    fun heapify(hT: MutableList<Int>, i: Int) {
         int size = hT.size()
         int largest = i
         int l = 2 * i + 1
