@@ -50,7 +50,6 @@ class Heap {
         hT.remove(size-1)
         for (j in size/2-1 downTo 0)
             heapify(hT, j)
-        }
     }
 }
 
