@@ -23,10 +23,10 @@ fun <T> mergesort(A: MutableList<Comparable<T>>, temp: MutableList<Comparable<T>
       A[curr] = temp[i1++]
     }
     else if (temp[i1] < temp[i2]) {  // Get smaller value
-      A[curr] = temp[i1++];
+      A[curr] = temp[i1++]
     }
     else{
-      A[curr] = temp[i2++];
+      A[curr] = temp[i2++]
     }
   }
 }
