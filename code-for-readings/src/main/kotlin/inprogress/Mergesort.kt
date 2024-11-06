@@ -2,7 +2,7 @@
 // Ported to Kotlin by Dave Musicant from Java code at
 // https://opendsa-server.cs.vt.edu/OpenDSA/Books/Everything/html/MergesortImpl.html
 
-fun <T> mergesort(A: List<Comparable<T>>, temp: List<Comparable<T>>, left: Int, right: Int) {
+fun <T> mergesort(A: MutableList<Comparable<T>>, temp: MutableList<Comparable<T>>, left: Int, right: Int) {
   if (left == right) {        // List has one record
       return
   }
@@ -13,16 +13,16 @@ fun <T> mergesort(A: List<Comparable<T>>, temp: List<Comparable<T>>, left: Int, 
     temp[i] = A[i]
   }
   // Do the merge operation back to A
-  int i1 = left;
-  int i2 = mid + 1;
-  for (int curr = left; curr <= right; curr++) {
+  var i1 = left
+  var i2 = mid + 1
+  for (curr in left..right) {
     if (i1 == mid+1) {                 // Left sublist exhausted
-      A[curr] = temp[i2++];
+      A[curr] = temp[i2++]
     }
     else if (i2 > right) {             // Right sublist exhausted
-      A[curr] = temp[i1++];
+      A[curr] = temp[i1++]
     }
-    else if (temp[i1].compareTo(temp[i2]) <= 0) {  // Get smaller value
+    else if (temp[i1] < temp[i2]) {  // Get smaller value
       A[curr] = temp[i1++];
     }
     else{
