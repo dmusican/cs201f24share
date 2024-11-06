@@ -4,7 +4,7 @@
 
 // fun <T> mergesort(A: MutableList<Comparable<T>>) {
 //     _mergesort(A, listOf<
-fun <T> _mergesort(A: MutableList<Comparable<T>>, temp: MutableList<Comparable<T>>, left: Int, right: Int) {
+fun <T: Comparable<T>> _mergesort(A: MutableList<T>, temp: MutableList<T>, left: Int, right: Int) {
     if (left == right) {        // List has one record
         return
     }
