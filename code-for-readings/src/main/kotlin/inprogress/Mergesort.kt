@@ -10,7 +10,7 @@ fun <T> mergesort(A: List<Comparable<T>>, temp: List<Comparable<T>>, left: Int, 
   mergesort(A, temp, left, mid)     // Mergesort first half
   mergesort(A, temp, mid+1, right)  // Mergesort second half
   for (i in left..right) {    // Copy subarray to temp
-    temp[i] = A[i];
+    temp[i] = A[i]
   }
   // Do the merge operation back to A
   int i1 = left;
