@@ -34,3 +34,9 @@ fun <T: Comparable<T>> _mergesort(A: MutableList<T>, temp: MutableList<T>, left:
         }
     }
 }
+
+fun main() {
+    var list = mutableListOf(10, 4, 2, 1, 20, 29, 3, 2, 6)
+    mergesort(list)
+    println(list)
+}
