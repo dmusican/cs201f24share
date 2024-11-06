@@ -2,8 +2,9 @@
 // Ported to Kotlin by Dave Musicant from Java code at
 // https://opendsa-server.cs.vt.edu/OpenDSA/Books/Everything/html/MergesortImpl.html
 
-// fun <T> mergesort(A: MutableList<Comparable<T>>) {
-//     _mergesort(A, listOf<
+ fun <T> mergesort(A: MutableList<Comparable<T>>) {
+     _mergesort(A, listOf<
+
 fun <T: Comparable<T>> _mergesort(A: MutableList<T>, temp: MutableList<T>, left: Int, right: Int) {
     if (left == right) {        // List has one record
         return
