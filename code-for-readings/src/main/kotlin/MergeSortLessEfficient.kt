@@ -10,7 +10,8 @@ fun <T: Comparable<T>> _mergesort_le(A: MutableList<T> left: Int, right: Int) {
     if (left == right) {        // List has one record
         return
     }
-    val temp = MutableList<T?>(A.count(), {null})
+    // Copies A, just a convenient way to make a list of the right size
+    val temp = A.toMutableList()
 
     val mid = (left+right)/2          // Select midpoint
     _mergesort_le(A, left, mid)     // Mergesort first half
