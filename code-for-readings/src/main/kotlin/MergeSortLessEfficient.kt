@@ -10,7 +10,7 @@ fun <T: Comparable<T>> _mergesort_le(A: MutableList<T> left: Int, right: Int) {
     if (left == right) {        // List has one record
         return
     }
-    val temp = Array<T>(list.count() { null },
+    val temp = listOf<T>()
 
     val mid = (left+right)/2          // Select midpoint
     _mergesort_le(A, temp, left, mid)     // Mergesort first half
