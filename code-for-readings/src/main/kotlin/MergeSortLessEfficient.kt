@@ -3,7 +3,7 @@
 // https://opendsa-server.cs.vt.edu/OpenDSA/Books/Everything/html/MergesortImpl.html
 
 fun <T: Comparable<T>> mergesort_le(A: MutableList<T>) {
-    _mergesort(A, A.toMutableList(), 0, A.count()-1)
+    _mergesort_le(A, A.toMutableList(), 0, A.count()-1)
 }
 
 fun <T: Comparable<T>> _mergesort_le(A: MutableList<T> left: Int, right: Int) {
