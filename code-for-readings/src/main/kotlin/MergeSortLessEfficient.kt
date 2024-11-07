@@ -6,7 +6,7 @@ fun <T: Comparable<T>> mergesort_le(A: MutableList<T>) {
     _mergesort_le(A, 0, A.count()-1)
 }
 
-fun <T: Comparable<T>> _mergesort_le(A: MutableList<T> left: Int, right: Int) {
+fun <T: Comparable<T>> _mergesort_le(A: MutableList<T>, left: Int, right: Int) {
     if (left == right) {        // List has one record
         return
     }
