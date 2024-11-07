@@ -13,8 +13,8 @@ fun <T: Comparable<T>> _mergesort_le(A: MutableList<T> left: Int, right: Int) {
     val temp = MutableList<T?>(A.count(), {null})
 
     val mid = (left+right)/2          // Select midpoint
-    _mergesort_le(A, temp, left, mid)     // Mergesort first half
-    _mergesort_le(A, temp, mid+1, right)  // Mergesort second half
+    _mergesort_le(A, left, mid)     // Mergesort first half
+    _mergesort_le(A, mid+1, right)  // Mergesort second half
     for (i in left..right) {    // Copy subarray to temp
         temp[i] = A[i]
     }
