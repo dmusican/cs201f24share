@@ -2,19 +2,19 @@
 // Ported to Kotlin by Dave Musicant from Java code at
 // https://opendsa-server.cs.vt.edu/OpenDSA/Books/Everything/html/MergesortImpl.html
 
-fun <T: Comparable<T>> mergesort(A: MutableList<T>) {
+fun <T: Comparable<T>> mergesort_le(A: MutableList<T>) {
     _mergesort(A, A.toMutableList(), 0, A.count()-1)
 }
 
-fun <T: Comparable<T>> _mergesort(A: MutableList<T> left: Int, right: Int) {
+fun <T: Comparable<T>> _mergesort_le(A: MutableList<T> left: Int, right: Int) {
     if (left == right) {        // List has one record
         return
     }
     val temp = Array<T>(list.count() { null },
 
     val mid = (left+right)/2          // Select midpoint
-    _mergesort(A, temp, left, mid)     // Mergesort first half
-    _mergesort(A, temp, mid+1, right)  // Mergesort second half
+    _mergesort_le(A, temp, left, mid)     // Mergesort first half
+    _mergesort_le(A, temp, mid+1, right)  // Mergesort second half
     for (i in left..right) {    // Copy subarray to temp
         temp[i] = A[i]
     }
@@ -39,6 +39,6 @@ fun <T: Comparable<T>> _mergesort(A: MutableList<T> left: Int, right: Int) {
 
 fun main() {
     var list = mutableListOf(10, 4, 2, 1, 20, 29, 3, 2, 6)
-    mergesort(list)
+    mergesort_le(list)
     println(list)
 }
