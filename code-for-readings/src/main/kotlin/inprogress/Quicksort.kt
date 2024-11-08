@@ -33,6 +33,6 @@ fun <T: Comparable<T>> partition(A: MutableList<T>, leftStart: Int, rightStart: 
 
 fun main() {
     var list = mutableListOf(10, 4, 2, 1, 20, 29, 3, 2, 6)
-    mergesort(list)
+    quicksort(list, 0, list.count()-1)
     println(list)
 }
