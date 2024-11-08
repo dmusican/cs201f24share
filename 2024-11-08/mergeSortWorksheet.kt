@@ -43,12 +43,12 @@ fun <T: Comparable<T>> merge(list: MutableList<T>,
             left = left + 1
         } else {
 
-            tempList[cur] = _________________________________
+            tempList[cur] = list[right]
 
-            right = __________________________________________
+            right = right + 1
         }
 
-        cur = ________________________________________________
+        cur = cur + 1
     }
 
     // If above loop exits, either left half or right half is
