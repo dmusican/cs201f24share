@@ -56,17 +56,17 @@ fun <T: Comparable<T>> merge(list: MutableList<T>,
 
     // Copy rest of first half
 
-    while (_______________________________________) {
+    while (left <= leftEnd) {
 
-        tempList[cur] = ___________________________________
+        tempList[cur] = list[left]
         cur = cur + 1
         left = left + 1
     }
 
     // Copy rest of second half
-    while (_______________________________________________) {
+    while (right <= rightEnd) {
 
-        tempList[cur] = ______________________________________
+        tempList[cur] = list[right]
         cur = cur + 1
         right = right + 1
     }
