@@ -30,3 +30,9 @@ fun <T: Comparable<T>> partition(A: MutableList<T>, leftStart: Int, rightStart: 
     }
     return left            // Return first position in right partition
 }
+
+fun main() {
+    var list = mutableListOf(10, 4, 2, 1, 20, 29, 3, 2, 6)
+    mergesort(list)
+    println(list)
+}
