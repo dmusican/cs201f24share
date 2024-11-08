@@ -10,9 +10,9 @@ fun <T: Comparable<T>> quicksort(A: MutableList<T>, i: Int, j:Int) { // Quicksor
     swap(A, pivotindex, j)               // Stick pivot at end
     // k will be the first position in the right subarray
     val k = partition(A, i, j-1, A[j])
-    swap(A, k, j);                        // Put pivot in place
-    if ((k-i) > 1) { quicksort(A, i, k-1); }  // Sort left partition
-    if ((j-k) > 1) { quicksort(A, k+1, j); }  // Sort right partition
+    swap(A, k, j)                        // Put pivot in place
+    if ((k-i) > 1) { quicksort(A, i, k-1) }  // Sort left partition
+    if ((j-k) > 1) { quicksort(A, k+1, j) }  // Sort right partition
 }
 
 fun findpivot(i: Int, j: Int): Int {
