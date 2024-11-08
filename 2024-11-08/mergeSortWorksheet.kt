@@ -75,5 +75,5 @@ fun <T: Comparable<T>> merge(list: MutableList<T>,
 
     for (i in 0..< rightEnd - leftStart + 1)
 
-        __________________________________ = tempList[i]
+        list[leftStart + i] = tempList[i]
 }
