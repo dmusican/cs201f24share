@@ -25,7 +25,7 @@ fun <T: Comparable<T>> partition(A: MutableList<T>, leftStart: Int, rightStart: 
     var right = rightStart
     while (left <= right) { // Move bounds inward until they meet
         while (A[left] < pivot) { left++ }
-        while ((right >= left) && (A[right] >= pivot) { right-- }
+        while ((right >= left) && (A[right] >= pivot)) { right-- }
         if (right > left) { swap(A, left, right) } // Swap out-of-place values
     }
     return left            // Return first position in right partition
