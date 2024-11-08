@@ -73,7 +73,7 @@ fun <T: Comparable<T>> merge(list: MutableList<T>,
 
     // Copy temp list over original
 
-    for (i in 0..< _________________________________________)
+    for (i in 0..< rightEnd - leftStart + 1)
 
         __________________________________ = tempList[i]
 }
