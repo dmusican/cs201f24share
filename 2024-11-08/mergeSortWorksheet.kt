@@ -38,9 +38,9 @@ fun <T: Comparable<T>> merge(list: MutableList<T>,
     while (left <= leftEnd && right <= rightEnd) {
         if (list[left] <= list[right]) {
 
-            tempList[cur] = __________________________________
+            tempList[cur] = list[left]
 
-            left = _____________________________________
+            left = left + 1
         } else {
 
             tempList[cur] = _________________________________
