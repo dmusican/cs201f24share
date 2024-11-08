@@ -1,3 +1,8 @@
+// Mergesort code
+// Ported to Kotlin by Dave Musicant from Java code at
+// https://opendsa-server.cs.vt.edu/OpenDSA/Books/Everything/html/Quicksort.html
+
+
 fun <T> swap(list: MutableList<T>, i: Int, j: Int) {
     val temp = list[i]
     list[i] = list[j]
