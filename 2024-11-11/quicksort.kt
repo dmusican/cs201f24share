@@ -15,11 +15,11 @@ fun <T: Comparable<T>> _quicksort(list: MutableList<T>, left: Int, right: Int) {
         var down = right
 
         while (up < down) {
-            while (up < right && _______________________________ ) {
+            while (up < right && list[up] < pivot) {
                 up++
             }
 
-            while (down > left && ______________________________) {
+            while (down > left && list[down] > pivot) {
                 down--
             }
 
@@ -32,8 +32,8 @@ fun <T: Comparable<T>> _quicksort(list: MutableList<T>, left: Int, right: Int) {
         // than or equal to pivot.
         swap(list,left,down)
 
-        _quicksort(list, _________________, ____________________)
+        _quicksort(list, left, down-1)
 
-        _quicksort(list, _________________, ____________________)
+        _quicksort(list, down+1, right)
     }
 }
