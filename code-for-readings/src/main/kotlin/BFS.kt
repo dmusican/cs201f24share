@@ -1,5 +1,5 @@
-// Kotlin version of depth-first search code from
-// https://www.programiz.com/dsa/graph-dfs
+// Kotlin version of breadth-first search code from
+// https://www.programiz.com/dsa/graph-bfs
 // Ported by Dave Musicant
 // DFS algorithm in Java
 
