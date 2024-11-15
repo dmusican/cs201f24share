@@ -37,7 +37,7 @@ class Graph(var numVertices: Int) {
         visited[vertex] = true
         println("Visiting " + vertex)
 
-        queue.addLast(__________________________________)
+        queue.addLast(vertex)
 
         while (!queue.isEmpty()) {
 
@@ -45,12 +45,12 @@ class Graph(var numVertices: Int) {
 
             for (next in 0..<numVertices) {
 
-                if (______________________________________________) {
+                if (adjacencyMatrix[currentVertex][next] && !visited[next]) {
 
-                    visited[_______________________________] = true
+                    visited[next] = true
                     println("Visiting " + next)
 
-                    queue.addLast(_________________________________)
+                    queue.addLast(next)
                 }
             }
         }
@@ -61,6 +61,7 @@ class Graph(var numVertices: Int) {
         val queue = ArrayDeque<Int>()
         val visited = mutableMapOf<Int, Int>()  // both visited and vertex -> previous
 
+        visited[startVertex] = -1   // forcing something, because its my start
         queue.addLast(startVertex)
 
         var currentVertex = -1 // just an init value
@@ -68,29 +69,29 @@ class Graph(var numVertices: Int) {
 
             currentVertex = queue.removeFirst()
 
-            if (_______________________________________________) {
+            if (currentVertex == endVertex) {
                 break
             }
 
             // Visit all adjacent vertices
             for (next in 0..<numVertices) {
-                if (adjacencyMatrix[currentVertex][next] && (________________________________) {
+                if (adjacencyMatrix[currentVertex][next] && (visited[next] == null)) {
 
-                    visited[next] = ______________________________________________
+                    visited[next] = currentVertex
 
 
-                    queue.addLast(____________________________________________)
+                    queue.addLast(next)
                 }
             }
         }
 
 
-        if (currentVertex == ___________________________________) {
+        if (currentVertex == endVertex) {
             println("Shortest path backwards from $startVertex to $endVertex: ")
             while (currentVertex != startVertex) {
                 print("$currentVertex ")
 
-                currentVertex = ___________________________________________
+                currentVertex = visited[currentVertex]!!
             }
             println(startVertex)
         } else {
