@@ -56,6 +56,51 @@ class Graph(var numVertices: Int) {
         }
     }
 
+    fun printShortestPath(startVertex: Int, endVertex: Int) {
+
+        val queue = ArrayDeque<Int>()
+        val visited = mutableMapOf<Int, Int>()  // both visited and vertex -> previous
+
+        queue.addLast(startVertex)
+
+        var currentVertex = -1 // just an init value
+        while (queue.isNotEmpty()) {
+
+            currentVertex = queue.removeFirst()
+
+            if (_______________________________________________) {
+                break
+            }
+
+            // Visit all adjacent vertices
+            for (next in 0..<numVertices) {
+                if (adjacencyMatrix[currentVertex][next] && (________________________________) {
+
+                    visited[next] = ______________________________________________
+
+
+                    queue.addLast(____________________________________________)
+                }
+            }
+        }
+
+
+        if (currentVertex == ___________________________________) {
+            println("Shortest path backwards from $startVertex to $endVertex: ")
+            while (currentVertex != startVertex) {
+                print("$currentVertex ")
+
+                currentVertex = ___________________________________________
+            }
+            println(startVertex)
+        } else {
+            println("Couldn't get from $startVertex to $endVertex.")
+        }
+
+    }
+    }
+
+
 fun main() {
     val graph = Graph(numVertices=7)
     graph.addEdge(1,3)
