@@ -3,7 +3,7 @@ data class Person(
     val age: Int
 )
 
-fun getAge(person: Person) {
+fun getAge(person: Person): Int {
     return person.age
 }
 
