@@ -8,4 +8,8 @@ fun main() {
     // Shorter
     list = MutableList<Int>(10) {it * 5}
     println(list)
+
+    // Our example
+    var list2 = MutableList<Int?>(10) {null}
+    println(list2)
 }
