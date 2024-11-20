@@ -6,6 +6,6 @@ fun main() {
     println(list)
 
     // Shorter
-    var list = MutableList<Int>(10, {it * 5})
+    var list = MutableList<Int>(10) {it * 5}
     println(list)
 }
