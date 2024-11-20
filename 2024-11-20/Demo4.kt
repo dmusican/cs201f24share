@@ -15,4 +15,6 @@ class Thing {
 fun main() {
     val t = Thing()
     println(t.countit())
+    t.word = "hello"
+    println(t.countit())
 }
