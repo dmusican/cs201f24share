@@ -13,4 +13,13 @@ fun main() {
     // even shorter
     result = people.maxByOrNull( {it.age} )
     print(result)
+
+
+
+
+
+
+    // even shorter
+    result = people.maxByOrNull {it.age}
+    print(result)
 }
