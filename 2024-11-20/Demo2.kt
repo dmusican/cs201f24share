@@ -9,4 +9,8 @@ fun main() {
     // print out the oldest person
     val result = people.maxByOrNull( {person: Person -> person.age} )
     print(result)
+
+    // even shorter
+    val result = people.maxByOrNull( {it.age} )
+    print(result)
 }
